@@ -9,7 +9,11 @@ module.exports = {
     extend: {
       colors: {
         'blue-jp': '#3138D1',
-        'black-jp': '#222A41'
+        'blue-100-jp': '#3B43F2',
+        'black-jp': '#222A41',
+        'gray-jp': '#6D7783',
+        'gray-100-jp': '#D8D8D8',
+        'gray-200-jp': '#AEB7C1'
       }
     }
   },

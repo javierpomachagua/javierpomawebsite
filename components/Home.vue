@@ -1,6 +1,26 @@
 <template>
   <div class="home">
     <div class="navbar">
+      <div class="navbar__items">
+        <div class="navbar__items-menu">
+          <img src="~assets/img/logo.svg">
+          <a href="#">Sobre mí</a>
+          <a href="#">Portafolio</a>
+          <a href="#">Blog</a>
+          <a href="#">Contacto</a>
+        </div>
+        <div class="navbar__items-socials">
+          <a class="navbar__items-socials-network">
+            <img src="~assets/img/linkedin.svg">
+          </a>
+          <a class="navbar__items-socials-network">
+            <img src="~assets/img/instagram.svg">
+          </a>
+          <a class="navbar__items-socials-network">
+            <img src="~assets/img/twitter.svg">
+          </a>
+        </div>
+      </div>
       <a class="navbar__menu">
         <img src="~assets/img/open-menu.png" alt="Menú">
       </a>
@@ -15,7 +35,7 @@
           Hola
         </p>
         <h1 class="home__name">
-          I'm Javier
+          Soy Javier
         </h1>
         <p class="home__description">
           Desarrollador de Aplicaciones, apasionado en
@@ -40,7 +60,10 @@ export default {
   @apply overflow-hidden;
 }
 .navbar__menu {
-  @apply float-right w-10 pr-5 pt-5;
+  @apply float-right w-10 pr-5 pt-5
+}
+.navbar__items {
+  @apply hidden
 }
 .bg-square {
   @apply absolute bg-blue-jp transform rotate-45;
@@ -55,7 +78,7 @@ export default {
   @apply m-0 overflow-hidden relative
 }
 .home__body {
-  @apply m-20 flex flex-col items-center
+  @apply m-20 flex flex-col items-center mt-10
 }
 .home__image {
   @apply w-40 rounded-full shadow-lg
@@ -74,5 +97,51 @@ export default {
 }
 .home__cta {
   @apply w-full mt-6 bg-blue-100-jp text-white rounded-full px-4 py-2
+}
+
+@screen md {
+  .navbar {
+    @apply mb-40
+  }
+  .navbar__menu {
+    @apply hidden
+  }
+  .navbar__items {
+    @apply block mt-5 mx-20 flex justify-around items-center
+  }
+  .navbar__items-menu img {
+    @apply inline-block mr-6
+  }
+  .navbar__items-menu a {
+    @apply text-sm font-semibold inline-block mr-4
+  }
+  .navbar__items-socials {
+    @apply flex flex-wrap justify-center
+  }
+  .navbar__items-socials-network {
+    @apply w-10 h-10 bg-blue-100-jp rounded-full p-2 mr-4 flex justify-center items-center border-white border-1;
+  }
+  .home {
+   @apply overflow-visible
+  }
+  .home__body {
+    @apply flex-row-reverse justify-evenly items-center
+  }
+  .home__information {
+    @apply mt-0 text-left
+  }
+  .home__name {
+    @apply text-5xl
+  }
+  .home__image {
+    @apply w-96
+  }
+  .bg-square {
+    border-radius: 2rem;
+    width: 50rem;
+    height: 50rem;
+    top: -200px;
+    right: -200px;
+  }
 }
 </style>

@@ -81,7 +81,7 @@ export default {
   @apply m-20 flex flex-col items-center mt-10
 }
 .home__image {
-  @apply w-40 rounded-full shadow-lg
+  @apply w-40 rounded-full shadow-xl
 }
 .home__information {
   @apply text-center mt-10
@@ -122,7 +122,7 @@ export default {
     @apply w-10 h-10 bg-blue-100-jp rounded-full p-2 mr-4 flex justify-center items-center border-white border-1;
   }
   .home {
-   @apply overflow-visible
+   @apply overflow-hidden pb-20
   }
   .home__body {
     @apply flex-row-reverse justify-evenly items-center
@@ -131,7 +131,7 @@ export default {
     @apply mt-0 text-left
   }
   .home__name {
-    @apply text-5xl
+    @apply text-jp-xl
   }
   .home__image {
     @apply w-96

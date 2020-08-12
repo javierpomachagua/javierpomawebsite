@@ -70,9 +70,27 @@ export default {
   border-width: 1px;
 }
 .skills__category-title {
-  @apply mt-4 text-lg font-semibold text-center
+  @apply mt-4 text-lg font-medium text-center
 }
 .skills__category-description {
   @apply mt-4 text-center text-gray-jp
+}
+@screen md {
+  .skills {
+    @apply mx-40 my-32
+  }
+  .skills__title {
+    @apply text-jp-xl
+  }
+  .skills__categories {
+    @apply flex flex-row mb-0
+  }
+  .skills__category {
+    @apply bg-white border-none;
+    border-radius: 2rem;
+  }
+  .skills__category-title {
+    @apply text-2xl
+  }
 }
 </style>

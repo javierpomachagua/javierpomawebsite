@@ -113,7 +113,7 @@ export default {
     @apply px-56
   }
   .portfolio__title {
-    @apply text-5xl
+    @apply text-jp-xl
   }
   .portfolio__categories h3 {
     @apply text-lg

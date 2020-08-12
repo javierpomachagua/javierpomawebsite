@@ -42,7 +42,7 @@ export default {
 
 <style>
 .footer {
-  @apply p-10
+  @apply p-20 pb-5
 }
 .footer__links {
   @apply flex flex-wrap justify-center mb-4

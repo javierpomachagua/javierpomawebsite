@@ -6,7 +6,7 @@
           Siéntese libre de contactarse conmigo y conversar
         </h1>
         <input class="contactme__name" type="text" placeholder="Su nombre" required>
-        <input class="contactme__email" type="text" placeholder="Su correo" required>
+        <input class="contactme__email" type="email" placeholder="Su correo" required>
         <textarea class="contactme__message" rows="4" placeholder="Escriba su mensaje" required />
         <button type="submit" class="contactme__cta">
           Enviar
@@ -25,6 +25,12 @@ export default {
 </script>
 
 <style>
+.contactme {
+  @apply mt-20
+}
+.contactme__form {
+  @apply px-10
+}
 .contactme__form form {
   @apply flex flex-col items-center
 }
@@ -32,25 +38,34 @@ export default {
   @apply mx-10 text-center mb-10 text-base font-bold
 }
 .contactme__name {
-  @apply w-96 border-b-2 border-gray-200-jp mb-6 text-sm outline-none
+  @apply w-64 border-b-2 border-gray-200-jp mb-6 text-sm outline-none
 }
 .contactme__email {
-  @apply w-96 border-b-2 border-gray-200-jp mb-6 text-sm outline-none
+  @apply w-64 border-b-2 border-gray-200-jp mb-6 text-sm outline-none
 }
 .contactme__message {
-  @apply w-96 border-b-2 border-gray-200-jp mb-4 text-sm outline-none
+  @apply w-64 border-b-2 border-gray-200-jp mb-4 text-sm outline-none
 }
 .contactme__cta {
   @apply w-24 mt-6 bg-blue-100-jp text-white rounded-full px-4 py-2
 }
 @screen md {
   .contactme {
-    @apply relative overflow-hidden;
+    @apply relative overflow-hidden mt-0;
   }
   .contactme__form {
     @apply border-none m-24 py-10 px-12 bg-white mx-auto shadow-lg;
     border-radius: 2rem;
     width: 600px;
+  }
+  .contactme__name {
+    @apply w-96
+  }
+  .contactme__email {
+    @apply w-96
+  }
+  .contactme__message {
+    @apply w-96
   }
   .bg-square-3 {
     @apply absolute bg-blue-jp transform rotate-45;

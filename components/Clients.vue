@@ -38,7 +38,7 @@ export default {
 
 <style>
 .clients {
-  @apply flex flex-col items-center
+  @apply flex flex-col items-center mt-20
 }
 .clients__intro {
   @apply text-lg text-black-jp
@@ -56,7 +56,7 @@ export default {
   @apply mb-4
 }
 .client__image img {
-  @apply mx-auto my-0 rounded-lg
+  @apply mx-auto my-0 rounded-full w-32 h-32 object-cover shadow-lg
 }
 .client__description {
   @apply mx-6 flex flex-col items-center
@@ -71,7 +71,7 @@ export default {
   @apply text-base font-bold
 }
 .client__description h3 {
-  @apply text-base
+  @apply text-base mb-4
 }
 .clients__steps {
   @apply flex flex-row
@@ -111,13 +111,13 @@ export default {
     @apply text-xl
   }
   .client__description h3 {
-    @apply mb-4 text-xl
+    @apply text-xl
   }
   .client__image {
     @apply mx-10 my-8
   }
   .client__image img {
-    @apply w-72 h-84 shadow-lg float-right
+    @apply w-72 h-84 rounded-lg float-right
   }
 }
 </style>

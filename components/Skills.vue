@@ -63,7 +63,7 @@ export default {
   @apply text-sm mt-4 text-gray-jp text-justify mx-12
 }
 .skills__categories {
-  @apply m-10
+  @apply m-10 mt-5
 }
 .skills__category {
   @apply flex flex-col items-center border-gray-100-jp border-solid rounded-lg p-10 my-4;

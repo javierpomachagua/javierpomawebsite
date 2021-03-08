@@ -8,13 +8,13 @@ module.exports = {
   theme: {
     borderWidth: {
       default: '1px',
-      '0': '0',
-      '1': '1px',
-      '2': '2px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
-      '8': '8px'
+      0: '0',
+      1: '1px',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px'
     },
     extend: {
       colors: {
@@ -23,7 +23,11 @@ module.exports = {
         'black-jp': '#222A41',
         'gray-jp': '#6D7783',
         'gray-100-jp': '#D8D8D8',
-        'gray-200-jp': '#AEB7C1'
+        'gray-200-jp': '#AEB7C1',
+        laravel: '#FF2D20',
+        vue: '#41B883',
+        flutter: '#1389FD',
+        react: '#20232A'
       },
       spacing: {
         72: '18rem',

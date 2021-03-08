@@ -1,6 +1,6 @@
 <template>
-  <section class="about">
-    <div class="about__body">
+  <section class="flex flex-col items-center max-w-6xl mx-auto mb-10 aboutme md:flex-row-reverse md:my-32">
+    <div class="flex flex-col items-center md:items-start md:w-1/2">
       <p class="about__intro">
         Un poco
       </p>
@@ -8,59 +8,47 @@
         Sobre mí
       </h1>
       <div class="about__sections">
-        <h3 @click="changeTab(0)">
-          Personal
-        </h3>
-        <h3 @click="changeTab(1)">
-          Educación
-        </h3>
-        <h3 @click="changeTab(2)">
-          Experiencia
+        <h3 v-for="(category, index) in about.categories" :key="index" @click="changeTab(index)">
+          {{ category.name }}
+          <div v-show="categoryActive === index" class="about__sections__active" />
         </h3>
       </div>
-      <p class="about__description">
-        {{ tabSelected.text }}
-      </p>
-      <button class="about__download">
-        Descargar CV
-      </button>
+      <div class="flex flex-col items-center h-auto md:h-56 md:items-start">
+        <p class="mx-12 mt-4 text-justify text-md text-gray-jp md:ml-0">
+          {{ categorySelected.text }}
+        </p>
+        <button class="w-48 px-4 py-2 mt-10 text-white rounded-full bg-blue-100-jp hover:bg-blue-jp md:mt-5">
+          Descargar CV
+        </button>
+      </div>
     </div>
     <div class="bg-square-2" />
-    <figure class="about__image">
-      <img src="~assets/img/about.jpg">
+    <figure class="mx-10 my-8 md:mr-10">
+      <img class="object-cover rounded-lg shadow-xl w-96 h-96 md:float-right" src="~assets/img/about.jpg">
     </figure>
   </section>
 </template>
 
 <script>
 export default {
+  async fetch () {
+    const about = await this.$content('about').fetch()
+    this.about = about
+  },
   data () {
     return {
-      tabActive: 2,
-      tabs: [
-        {
-          index: 0,
-          text: 'Personal Personal Personal Personal Personal Personal Personal Personal Personal Personal Personal Personal'
-        },
-        {
-          index: 1,
-          text: 'Educación Educación Educación Educación Educación Educación Educación Educación Educación Educación Educación Educación'
-        },
-        {
-          index: 2,
-          text: 'Experiencia Experiencia Experiencia Experiencia Experiencia Experiencia Experiencia Experiencia Experiencia Experiencia'
-        }
-      ]
+      categoryActive: 2,
+      about: { categories: [] }
     }
   },
   computed: {
-    tabSelected () {
-      return this.tabs.filter(tab => tab.index === this.tabActive)[0]
+    categorySelected () {
+      return this.about.categories.filter((tab, index) => index === this.categoryActive)[0]
     }
   },
   methods: {
     changeTab (index) {
-      this.tabActive = index
+      this.categoryActive = index
     }
   }
 }
@@ -83,7 +71,10 @@ export default {
   @apply mt-4 flex justify-around
 }
 .about__sections h3 {
-  @apply ml-4
+  @apply ml-4 flex flex-col items-center justify-center text-justify cursor-pointer
+}
+.about__sections__active {
+  @apply w-16 h-1 bg-blue-100-jp rounded-lg
 }
 .about__description {
   @apply text-sm mt-4 text-gray-jp text-justify mx-12
@@ -121,12 +112,6 @@ export default {
   }
   .about__description {
     @apply ml-0
-  }
-  .about__image {
-    @apply w-1/2
-  }
-  .about__image img {
-    @apply float-right
   }
 }
 </style>

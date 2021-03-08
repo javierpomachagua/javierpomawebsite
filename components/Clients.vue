@@ -1,44 +1,90 @@
 <template>
-  <section class="clients">
+  <section class="flex flex-col items-center mt-16 overflow-hidden md:mx-40 md:my-32">
     <p class="clients__intro">
-      Clients
+      {{ clients.intro }}
     </p>
-    <h1 class="clients__title">
-      Algunos notables clientes
+    <h1 class="mx-2 text-3xl font-bold text-center text-black-jp md:text-5xl">
+      {{ clients.title }}
     </h1>
-    <p class="clients__description">
-      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+    <p class="mx-12 mt-4 text-sm text-center text-gray-jp sm:w-72 sm:text-center">
+      {{ clients.description }}
     </p>
-    <div class="clients__list">
-      <div class="client">
-        <figure class="client__image">
-          <img src="~assets/img/client.jpg">
-        </figure>
-        <div class="client__description">
-          <img src="~assets/img/quote.svg">
-          <p>“Lean startup metrics venture innovator assets angel investor learning curve incubator branding advisor termsheet. IPad ecosystem conversion android advisor. Incubator vesting period metrics crowdfunding backing interaction design business model canvas strategy”</p>
-          <h2>Silvia Natalia</h2>
-          <h3>Owner Tanacon</h3>
-          <div class="clients__steps">
-            <div class="clients__step" />
-            <div class="clients__step" />
-            <div class="clients__step" />
+    <transition-group tag="div" name="slide" class="relative w-full p-20 mt-10 h-96 md:mt-20 md:h-80">
+      <template v-for="(testimonial, index) in clients.testimonials">
+        <div v-if="testimonial.id === testimonialActive" :key="testimonial.id" class="absolute top-0 right-0 md:bottom-0">
+          <div
+            class="md:flex md:flex-row md:items-center md:justify-center"
+          >
+            <figure class="md:mx-10">
+              <img
+                class="object-cover w-32 h-32 mx-auto my-0 rounded-full shadow-lg md:w-72 md:h-84 md:rounded-lg md:float-right"
+                src="~assets/img/client.jpg"
+              >
+            </figure>
+            <div class="flex flex-col items-center mx-6 md:w-1/3 md:items-start">
+              <img class="hidden md:block md:mb-2" src="~assets/img/quote.svg">
+              <p class="mb-4 text-sm text-center text-gray-jp md:text-left md:text-lg">
+                {{ testimonial.text }}
+              </p>
+              <h2 class="text-base font-bold sm:text-xl">
+                {{ testimonial.author }}
+              </h2>
+              <h3 class="mb-4 text-base sm:text-xl">
+                {{ testimonial.title }}
+              </h3>
+              <div class="flex flex-row">
+                <template v-for="n in clients.testimonials.length">
+                  <div
+                    :key="n"
+                    class="w-6 h-2 mr-2"
+                    :class="n === index + 1 ? 'bg-blue-500' : 'bg-gray-100-jp'"
+                  />
+                </template>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </template>
+    </transition-group>
   </section>
 </template>
 
 <script>
 export default {
-
+  async fetch () {
+    const clients = await this.$content('clients').fetch()
+    this.clients = clients
+  },
+  data () {
+    return {
+      clients: {},
+      testimonialActive: 1
+    }
+  },
+  created () {
+    setInterval(() => {
+      if (this.testimonialActive + 1 > this.clients.testimonials.length) {
+        this.testimonialActive = 1
+      } else {
+        this.testimonialActive++
+      }
+    }, 5000)
+  }
 }
 </script>
 
 <style>
-.clients {
-  @apply flex flex-col items-center mt-20
+.slide-leave-active,
+.slide-enter-active {
+  transition: all 1s;
+}
+.slide-enter {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+.slide-leave-to {
+  opacity: 0;
+  transform: translate(-100%, 0);
 }
 .clients__intro {
   @apply text-lg text-black-jp
@@ -46,78 +92,15 @@ export default {
 .clients__title {
   @apply text-3xl font-bold text-black-jp mx-2 text-center
 }
-.clients__description {
-  @apply text-sm mt-4 text-gray-jp text-justify mx-12
-}
 .clients__list {
   @apply p-10
 }
-.client__image {
-  @apply mb-4
-}
-.client__image img {
-  @apply mx-auto my-0 rounded-full w-32 h-32 object-cover shadow-lg
-}
-.client__description {
-  @apply mx-6 flex flex-col items-center
-}
-.client__description img {
-  @apply hidden
-}
-.client__description p {
-  @apply text-gray-jp text-sm mb-4 text-center
-}
-.client__description h2 {
-  @apply text-base font-bold
-}
-.client__description h3 {
-  @apply text-base mb-4
-}
-.clients__steps {
-  @apply flex flex-row
-}
-.clients__step {
-  @apply w-6 h-2 bg-gray-100-jp mr-2
-}
 @screen md {
-  .clients {
-    @apply mx-40 my-32
-  }
   .clients__title {
     @apply text-5xl
   }
-  .clients__description {
-    @apply w-72 text-center
-  }
   .clients__list {
     @apply mt-10
-  }
-  .client {
-    @apply flex flex-row items-center
-  }
-  .client__image {
-    @apply w-1/2
-  }
-  .client__description {
-    @apply w-1/2 items-start
-  }
-  .client__description img {
-    @apply block mb-2
-  }
-  .client__description p {
-    @apply text-left text-lg
-  }
-  .client__description h2 {
-    @apply text-xl
-  }
-  .client__description h3 {
-    @apply text-xl
-  }
-  .client__image {
-    @apply mx-10 my-8
-  }
-  .client__image img {
-    @apply w-72 h-84 rounded-lg float-right
   }
 }
 </style>

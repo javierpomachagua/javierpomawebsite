@@ -1,14 +1,14 @@
 <template>
-  <section class="contactme">
-    <div class="contactme__form">
-      <form action="#">
-        <h1 class="contactme__title">
+  <section class="mt-20 contactme md:relative md:overflow-hidden md:mt-0 md:flex md:justify-center">
+    <div class="relative px-10 md:w-min md:border-none md:m-24 md:py-10 md:px-12 md:bg-white md:shadow-lg md:rounded-2xl">
+      <form class="flex flex-col items-center" action="#">
+        <h1 class="mx-10 mb-10 text-base font-bold text-center">
           Siéntese libre de contactarse conmigo y conversar
         </h1>
-        <input class="contactme__name" type="text" placeholder="Su nombre" required>
-        <input class="contactme__email" type="email" placeholder="Su correo" required>
-        <textarea class="contactme__message" rows="4" placeholder="Escriba su mensaje" required />
-        <button type="submit" class="contactme__cta">
+        <input class="w-64 mb-10 text-sm border-b-2 outline-none border-gray-200-jp md:w-96" type="text" placeholder="Su nombre" required>
+        <input class="w-64 mb-10 text-sm border-b-2 outline-none border-gray-200-jp md:w-96" type="email" placeholder="Su correo" required>
+        <textarea class="w-64 text-sm border-b-2 outline-none border-gray-200-jp md:w-96" rows="4" placeholder="Escriba su mensaje" required />
+        <button type="submit" class="w-24 px-4 py-2 mt-6 text-white rounded-full bg-blue-100-jp hover:bg-blue-jp">
           Enviar
         </button>
       </form>
@@ -25,48 +25,7 @@ export default {
 </script>
 
 <style>
-.contactme {
-  @apply mt-20
-}
-.contactme__form {
-  @apply px-10
-}
-.contactme__form form {
-  @apply flex flex-col items-center
-}
-.contactme__title {
-  @apply mx-10 text-center mb-10 text-base font-bold
-}
-.contactme__name {
-  @apply w-64 border-b-2 border-gray-200-jp mb-6 text-sm outline-none
-}
-.contactme__email {
-  @apply w-64 border-b-2 border-gray-200-jp mb-6 text-sm outline-none
-}
-.contactme__message {
-  @apply w-64 border-b-2 border-gray-200-jp mb-4 text-sm outline-none
-}
-.contactme__cta {
-  @apply w-24 mt-6 bg-blue-100-jp text-white rounded-full px-4 py-2
-}
 @screen md {
-  .contactme {
-    @apply relative overflow-hidden mt-0;
-  }
-  .contactme__form {
-    @apply border-none m-24 py-10 px-12 bg-white mx-auto shadow-lg;
-    border-radius: 2rem;
-    width: 600px;
-  }
-  .contactme__name {
-    @apply w-96
-  }
-  .contactme__email {
-    @apply w-96
-  }
-  .contactme__message {
-    @apply w-96
-  }
   .bg-square-3 {
     @apply absolute bg-blue-jp transform rotate-45;
     border-radius: 4rem;

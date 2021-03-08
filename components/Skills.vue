@@ -1,22 +1,19 @@
 <template>
-  <section class="skills">
-    <p class="skills__intro">
-      Habilidades
-    </p>
+  <section class="flex flex-col items-center max-w-6xl mx-auto md:py-32">
     <h1 class="skills__title">
-      Servicios
+      {{ skills.title }}
     </h1>
     <p class="skills_description">
-      Lorem ipsum Lorem ipsum Lorem ipsum
+      {{ skills.description }}
     </p>
-    <div class="skills__categories">
-      <div v-for="category in categories" :key="category.title" class="skills__category">
-        <img class="skills__category-image" :src="require(`../assets/img/${category.image}`)" alt="Sistemas Personalizados">
+    <div class="grid m-10 mt-5 md:grid-cols-3 md:mb-0 sm:grid-cols-2">
+      <div v-for="service in skills.services" :key="service.name" class="skills__category">
+        <img class="skills__category-image" :src="require(`../assets/img/${service.icon}`)" alt="Sistemas Personalizados">
         <h1 class="skills__category-title">
-          {{ category.title }}
+          {{ service.name }}
         </h1>
         <p class="skills__category-description">
-          {{ category.description }}
+          {{ service.description }}
         </p>
       </div>
     </div>
@@ -25,25 +22,13 @@
 
 <script>
 export default {
+  async fetch () {
+    const skills = await this.$content('skills').fetch()
+    this.skills = skills
+  },
   data () {
     return {
-      categories: [
-        {
-          image: 'web.svg',
-          title: 'Landing Page',
-          description: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum'
-        },
-        {
-          image: 'mobile.svg',
-          title: 'Aplicaciones Personalizadas',
-          description: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum'
-        },
-        {
-          image: 'ecommerce.svg',
-          title: 'E-Commerce',
-          description: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum'
-        }
-      ]
+      skills: {}
     }
   }
 }

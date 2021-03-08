@@ -1,30 +1,47 @@
 <template>
-  <section class="blog">
-    <div class="blog__header">
-      <h1 class="blog__title">
-        Blog
-      </h1>
-      <p
-        class="blog__description"
-      >
-        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-      </p>
-      <div class="blog__categories">
-        <h3>UX Design</h3>
-        <h3>Landing Page</h3>
-        <h3>Aplicación Web</h3>
-        <h3>Móvil</h3>
+  <section class="mt-10 blog md:mt-0">
+    <div class="py-14 bg-blue-100-jp md:px-56">
+      <div class="max-w-6xl mx-auto">
+        <h1 class="px-12 text-3xl font-bold text-white md:text-jp-xl">
+          Blog
+        </h1>
+        <p
+          class="px-12 mt-6 text-white text-md"
+        >
+          Chequea mis últimos posts. Generalmente posteo sobre lo que voy aprendiendo para compartirlo
+        </p>
+        <!-- <div class="flex flex-row flex-wrap px-10 text-white">
+          <h3 class="w-32 mb-2 mr-4 md:text-lg">
+            UX Design
+          </h3>
+          <h3 class="w-32 mb-2 mr-4 md:text-lg">
+            Landing Page
+          </h3>
+          <h3 class="w-32 mb-2 mr-4 md:text-lg">
+            Aplicación Web
+          </h3>
+          <h3 class="w-32 mb-2 mr-4 md:text-lg">
+            Móvil
+          </h3>
+        </div> -->
       </div>
     </div>
-    <div class="blog__posts">
-      <div v-for="post in posts" :key="post.title" class="blog__post">
-        <figure class="blog__post-image">
-          <img :src="require(`~/assets/img/${post.image}`)" alt="post">
+    <div class="grid grid-cols-1 gap-0 md:grid-cols-3">
+      <div v-for="post in posts" :key="post.title" class="relative">
+        <figure>
+          <img class="object-cover w-full h-72 opacity-70" :src="require(`~/assets/img/posts/${post.image}`)" alt="post">
         </figure>
-        <div class="blog__post-description">
-          <p>{{ post.date }}</p>
-          <h1>{{ post.title }}</h1>
+        <div class="absolute bottom-0 w-full py-6 bg-gray-600 opacity-75">
+          <p class="mb-2 ml-10 text-xs text-white">
+            {{ post.date }}
+          </p>
+          <h1 class="ml-10 text-lg font-medium text-white">
+            {{ post.title }}
+          </h1>
         </div>
+      </div>
+      <div class="relative flex items-center justify-center text-4xl font-bold text-gray-200 bg-gray-600 md:h-72 h-36 opacity-70">
+        Ver más
       </div>
     </div>
   </section>
@@ -32,103 +49,17 @@
 
 <script>
 export default {
+  async fetch () {
+    const posts = await this.$content('posts').limit(5).fetch()
+    this.posts = posts
+  },
   data () {
     return {
-      posts: [
-        {
-          image: 'post.jpg',
-          title: 'Post One',
-          date: '25 Diciembre 2019'
-        },
-        {
-          image: 'post.jpg',
-          title: 'Post Two',
-          date: '22 Diciembre 2019'
-        },
-        {
-          image: 'post.jpg',
-          title: 'Post Two',
-          date: '22 Diciembre 2019'
-        },
-        {
-          image: 'post.jpg',
-          title: 'Post Two',
-          date: '22 Diciembre 2019'
-        },
-        {
-          image: 'post.jpg',
-          title: 'Post Two',
-          date: '22 Diciembre 2019'
-        },
-        {
-          image: 'post.jpg',
-          title: 'post Two',
-          date: '22 Diciembre 2019'
-        }
-      ]
+      posts: []
     }
   }
 }
 </script>
 
 <style>
-.blog {
-  @apply mt-10
-}
-.blog__header {
-  @apply bg-blue-100-jp py-10
-}
-.blog__title {
-  @apply text-3xl font-bold text-white px-10
-}
-.blog__description {
-  @apply text-white text-sm my-4 px-10
-}
-.blog__categories {
-  @apply flex flex-row flex-wrap text-white px-10
-}
-.blog__categories h3 {
-  @apply w-32 mr-4 mb-2
-}
-.blog__posts {
-  @apply grid grid-cols-1 gap-0
-}
-.blog__post {
-  @apply relative z-10
-}
-.blog__post-description {
-  @apply hidden bg-blue-100-jp py-6
-}
-.blog__post-description p {
-  @apply ml-10 text-white text-xs mb-2
-}
-.blog__post-description h1 {
-  @apply ml-10 text-white text-lg
-}
-@screen md {
-  .blog {
-    @apply mt-0
-  }
-  .blog__header {
-    @apply px-56
-  }
-  .blog__title {
-    @apply text-jp-xl
-  }
-  .blog__categories h3 {
-    @apply text-lg
-  }
-  .blog__post:hover .blog__post-description {
-    @apply block absolute bottom-0 w-full
-  }
-  .blog__post:hover{
-    @apply transition delay-150 duration-500 ease-in-out transform scale-105 z-20
-  }
-  .blog__posts {
-    @apply grid-cols-3
-  }
-  .blog__post-image img {
-    @apply h-64 w-full object-cover
-  }
-}
 </style>

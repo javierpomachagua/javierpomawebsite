@@ -1,5 +1,7 @@
 <template>
-  <section class="flex flex-col items-center max-w-6xl mx-auto mb-10 aboutme md:flex-row-reverse md:my-32">
+  <section
+    class="flex flex-col items-center max-w-6xl mx-auto mb-10 aboutme md:flex-row-reverse md:my-32"
+  >
     <div class="flex flex-col items-center md:items-start md:w-1/2">
       <p class="about__intro">
         Un poco
@@ -8,23 +10,37 @@
         Sobre mí
       </h1>
       <div class="about__sections">
-        <h3 v-for="(category, index) in about.categories" :key="index" @click="changeTab(index)">
+        <h3
+          v-for="(category, index) in about.categories"
+          :key="index"
+          @click="changeTab(index)"
+        >
           {{ category.name }}
-          <div v-show="categoryActive === index" class="about__sections__active" />
+          <div
+            v-show="categoryActive === index"
+            class="about__sections__active"
+          />
         </h3>
       </div>
       <div class="flex flex-col items-center h-auto md:h-56 md:items-start">
         <p class="mx-12 mt-4 text-justify text-md text-gray-jp md:ml-0">
           {{ categorySelected.text }}
         </p>
-        <button class="w-48 px-4 py-2 mt-10 text-white rounded-full bg-blue-100-jp hover:bg-blue-jp md:mt-5">
+        <a
+          href="https://drive.google.com/file/d/1P76I7QOtBprawtaXBk1-I0uCDBCHHoYu/view?usp=sharing"
+          target="_blank"
+          class="w-48 px-4 py-2 mt-10 text-center text-white rounded-full bg-blue-100-jp hover:bg-blue-jp md:mt-5"
+        >
           Descargar CV
-        </button>
+        </a>
       </div>
     </div>
     <div class="bg-square-2" />
     <figure class="mx-10 my-8 md:mr-10">
-      <img class="object-cover rounded-lg shadow-xl w-96 h-96 md:float-right" src="~assets/img/about.jpg">
+      <img
+        class="object-cover rounded-lg shadow-xl w-96 h-96 md:float-right"
+        src="~assets/img/about.jpg"
+      >
     </figure>
   </section>
 </template>

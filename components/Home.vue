@@ -3,7 +3,18 @@
     <div class="navbar">
       <div class="navbar__items">
         <div class="navbar__items-menu">
-          <img src="~assets/img/logo.svg">
+          <svg
+            class="md:w-10 md:h-10 md:inline-block md:mr-6"
+            enable-background="new 0 0 512 512"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="m439.54 68.7h-367.08c-39.95 0-72.46 32.51-72.46 72.47v229.66c0 39.96 32.51 72.47 72.46 72.47h367.08c39.95 0 72.46-32.51 72.46-72.47v-229.66c0-39.96-32.51-72.47-72.46-72.47zm-253.73 115.29-76.23 76.23 67.79 67.79c5.86 5.86 5.86 15.36 0 21.21-5.85 5.86-15.35 5.86-21.21 0l-78.4-78.4c-5.86-5.86-5.86-15.35 0-21.21l86.83-86.83c5.86-5.86 15.36-5.86 21.22 0 5.85 5.85 5.85 15.35 0 21.21zm123.73-35.29-79.32 224.59c-2.76 7.82-11.33 11.91-19.14 9.15s-11.91-11.33-9.15-19.14l79.32-224.59c2.76-7.81 11.32-11.91 19.14-9.15 7.81 2.76 11.91 11.33 9.15 19.14zm124.7 113.69-86.83 86.83c-5.86 5.86-15.36 5.86-21.22 0-5.85-5.85-5.85-15.35 0-21.21l76.23-76.23-67.79-67.79c-5.86-5.86-5.86-15.36 0-21.21 5.85-5.86 15.35-5.86 21.21 0l78.4 78.4c5.86 5.86 5.86 15.35 0 21.21z"
+              />
+            </g>
+          </svg>
           <span
             class="px-2 mb-4 font-medium bg-white rounded-lg cursor-pointer text-md"
             @click="scrollToElement('aboutme')"
@@ -249,12 +260,6 @@ export default {
   }
   .navbar__items {
     @apply block mt-5 mx-20 flex justify-around items-center
-  }
-  .navbar__items-menu img {
-    @apply inline-block mr-6
-  }
-  .navbar__items-menu a {
-    @apply text-sm font-semibold inline-block mr-4
   }
   .navbar__items-socials {
     @apply flex flex-wrap justify-center

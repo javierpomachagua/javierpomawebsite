@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col items-center max-w-6xl mx-auto md:py-32">
+  <section class="flex flex-col items-center max-w-6xl mx-auto md:pb-32 md:pt-24">
     <h1 class="skills__title">
       {{ skills.title }}
     </h1>

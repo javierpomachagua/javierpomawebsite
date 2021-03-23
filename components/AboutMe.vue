@@ -1,8 +1,8 @@
 <template>
   <section
-    class="flex flex-col items-center max-w-6xl mx-auto mb-10 aboutme md:flex-row-reverse md:my-32"
+    class="relative flex flex-col items-center mx-auto mb-10 overflow-hidden max-w-7xl aboutme md:flex-row-reverse md:py-44"
   >
-    <div class="flex flex-col items-center md:items-start md:w-1/2">
+    <div v-if="!$fetchState.pending" class="flex flex-col items-center md:items-start md:w-1/2">
       <p class="about__intro">
         Un poco
       </p>
@@ -18,7 +18,7 @@
           {{ category.name }}
           <div
             v-show="categoryActive === index"
-            class="about__sections__active"
+            class="w-16 h-1 rounded-lg bg-blue-100-jp"
           />
         </h3>
       </div>
@@ -27,7 +27,7 @@
           {{ categorySelected.text }}
         </p>
         <a
-          href="https://drive.google.com/file/d/1P76I7QOtBprawtaXBk1-I0uCDBCHHoYu/view?usp=sharing"
+          href="https://drive.google.com/file/d/1A5-kuxP61_TWwKxwDAh08-J72JYt44-4/view?usp=sharing"
           target="_blank"
           class="w-48 px-4 py-2 mt-10 text-center text-white rounded-full bg-blue-100-jp hover:bg-blue-jp md:mt-5"
         >
@@ -35,7 +35,7 @@
         </a>
       </div>
     </div>
-    <div class="bg-square-2" />
+    <div class="bg-square-2 from-blue-100-jp to-blue-jp bg-gradient-to-b" />
     <figure class="mx-10 my-8 md:mr-10">
       <img
         class="object-cover rounded-lg shadow-xl w-96 h-96 md:float-right"
@@ -89,9 +89,6 @@ export default {
 .about__sections h3 {
   @apply ml-4 flex flex-col items-center justify-center text-justify cursor-pointer
 }
-.about__sections__active {
-  @apply w-16 h-1 bg-blue-100-jp rounded-lg
-}
 .about__description {
   @apply text-sm mt-4 text-gray-jp text-justify mx-12
 }
@@ -118,9 +115,9 @@ export default {
     @apply absolute bg-blue-jp transform rotate-45;
     border-radius: 4rem;
     z-index: -10;
-    width: 40rem;
-    height: 40rem;
-    top: 1100px;
+    width: 35rem;
+    height: 35rem;
+    top: 120px;
     left: -200px;
   }
   .about__sections h3 {

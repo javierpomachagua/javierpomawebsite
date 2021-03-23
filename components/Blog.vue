@@ -10,39 +10,29 @@
         >
           Chequea mis últimos posts. Generalmente posteo sobre lo que voy aprendiendo para compartirlo
         </p>
-        <!-- <div class="flex flex-row flex-wrap px-10 text-white">
-          <h3 class="w-32 mb-2 mr-4 md:text-lg">
-            UX Design
-          </h3>
-          <h3 class="w-32 mb-2 mr-4 md:text-lg">
-            Landing Page
-          </h3>
-          <h3 class="w-32 mb-2 mr-4 md:text-lg">
-            Aplicación Web
-          </h3>
-          <h3 class="w-32 mb-2 mr-4 md:text-lg">
-            Móvil
-          </h3>
-        </div> -->
       </div>
     </div>
     <div class="grid grid-cols-1 gap-0 md:grid-cols-3">
       <div v-for="post in posts" :key="post.title" class="relative">
-        <figure>
-          <img class="object-cover w-full h-72 opacity-70" :src="require(`~/assets/img/posts/${post.image}`)" alt="post">
-        </figure>
-        <div class="absolute bottom-0 w-full py-6 bg-gray-600 opacity-75">
-          <p class="mb-2 ml-10 text-xs text-white">
-            {{ post.date }}
-          </p>
-          <h1 class="ml-10 text-lg font-medium text-white">
-            {{ post.title }}
-          </h1>
+        <nuxt-link :to="`blog/${post.slug}`" class="group">
+          <figure class="overflow-hidden">
+            <img class="object-cover w-full duration-700 transform h-84 md:opacity-70 group-hover:scale-150" :src="require(`~/assets/img/posts/${post.image}`)" alt="post">
+          </figure>
+          <div class="absolute bottom-0 w-full py-6 bg-gray-800 opacity-75 md:bg-gray-600 group-hover:bg-gray-800">
+            <p class="mb-2 ml-10 text-xs text-white md:text-md">
+              {{ post.date }}
+            </p>
+            <h1 class="ml-10 text-lg font-medium text-white md:text-xl">
+              {{ post.title }}
+            </h1>
+          </div>
+        </nuxt-link>
+      </div>
+      <nuxt-link to="blog">
+        <div class="relative flex items-center justify-center text-4xl font-bold text-gray-200 bg-gray-600 md:h-84 h-36 opacity-70 hover:bg-gray-700">
+          Ver más
         </div>
-      </div>
-      <div class="relative flex items-center justify-center text-4xl font-bold text-gray-200 bg-gray-600 md:h-72 h-36 opacity-70">
-        Ver más
-      </div>
+      </nuxt-link>
     </div>
   </section>
 </template>

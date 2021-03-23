@@ -5,7 +5,7 @@
     <Skills />
     <Portfolio />
     <Clients />
-    <!-- <Blog /> -->
+    <Blog />
     <ContactMe />
     <Footer />
   </div>

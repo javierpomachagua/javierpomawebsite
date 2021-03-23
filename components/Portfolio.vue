@@ -23,7 +23,7 @@
         <figure>
           <img class="md:h-72 md:w-full md:object-cover" :src="require(`~/assets/img/${project.image}.jpg`)" alt="Project">
         </figure>
-        <div class="portfolio__project-description">
+        <div class="py-6 portfolio__project-description bg-blue-100-jp md:hidden">
           <div class="portfolio__project-tags">
             <span
               v-for="tag in project.tags"
@@ -31,10 +31,12 @@
               :class="`${tagStyle(tag)} text-white rounded-full px-3 py-1 text-sm`"
             >{{ tag }}</span>
           </div>
-          <h1 class="font-medium">
+          <h1 class="mx-10 mb-2 text-lg font-medium text-white md:text-xl">
             {{ project.title }}
           </h1>
-          <p>{{ project.description }}</p>
+          <p class="mx-10 mb-2 ml-10 text-sm text-justify text-white md:text-md">
+            {{ project.description }}
+          </p>
         </div>
       </div>
     </div>
@@ -118,18 +120,6 @@ export default {
 .portfolio__project {
   @apply relative z-10
 }
-.portfolio__project-description {
-  @apply bg-blue-100-jp py-6
-}
-.portfolio__project-description p {
-  @apply ml-10 text-white text-xs mb-2
-}
-.portfolio__project-description h1 {
-  @apply mx-10 text-white text-lg mb-2
-}
-.portfolio__project-description p {
-  @apply mx-10 text-justify
-}
 .portfolio__project-tags {
   @apply mx-10 flex mb-4
 }
@@ -148,9 +138,6 @@ export default {
   }
   .portfolio__categories h3 {
     @apply text-lg
-  }
-  .portfolio__project-description {
-    @apply hidden
   }
   .portfolio__project:hover .portfolio__project-description {
     @apply block absolute bottom-0 w-full

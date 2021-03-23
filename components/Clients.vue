@@ -9,19 +9,19 @@
     <p class="mx-12 mt-4 text-sm text-center text-gray-jp sm:w-72 sm:text-center">
       {{ clients.description }}
     </p>
-    <transition-group tag="div" name="slide" class="relative w-full p-20 mt-10 h-96 md:mt-20 md:h-80">
+    <transition-group tag="div" name="slide" class="relative w-full p-20 mt-10 md:w-8/12 h-96 md:mt-20 md:h-80">
       <template v-for="(testimonial, index) in clients.testimonials">
-        <div v-if="testimonial.id === testimonialActive" :key="testimonial.id" class="absolute top-0 right-0 md:bottom-0">
+        <div v-if="testimonial.id === testimonialActive" :key="testimonial.id" class="absolute top-0 right-0 md:w-full md:px-32 md:bottom-0">
           <div
             class="md:flex md:flex-row md:items-center md:justify-center"
           >
             <figure class="md:mx-10">
               <img
-                class="object-cover w-32 h-32 mx-auto my-0 rounded-full shadow-lg md:w-72 md:h-84 md:rounded-lg md:float-right"
-                src="~assets/img/client.jpg"
+                class="object-cover w-32 h-32 mx-auto my-0 rounded-full shadow-lg md:w-72 md:h-84 md:rounded-xl md:float-right"
+                :src="require(`~/assets/img/clients/${testimonial.image}`)"
               >
             </figure>
-            <div class="flex flex-col items-center mx-6 md:w-1/3 md:items-start">
+            <div class="flex flex-col items-center mx-6 mt-6 md:w-1/3 md:items-start">
               <img class="hidden md:block md:mb-2" src="~assets/img/quote.svg">
               <p class="mb-4 text-sm text-center text-gray-jp md:text-left md:text-lg">
                 {{ testimonial.text }}
@@ -29,7 +29,7 @@
               <h2 class="text-base font-bold sm:text-xl">
                 {{ testimonial.author }}
               </h2>
-              <h3 class="mb-4 text-base sm:text-xl">
+              <h3 class="mb-4 text-base text-center md:px-0 md:text-left sm:text-xl">
                 {{ testimonial.title }}
               </h3>
               <div class="flex flex-row">
@@ -80,11 +80,11 @@ export default {
 }
 .slide-enter {
   opacity: 0;
-  transform: translate(100%, 0);
+  transform: translateX(300px);
 }
 .slide-leave-to {
   opacity: 0;
-  transform: translate(-100%, 0);
+  transform: translateX(-300px);
 }
 .clients__intro {
   @apply text-lg text-black-jp

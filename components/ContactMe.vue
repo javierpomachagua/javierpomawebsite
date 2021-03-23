@@ -1,8 +1,8 @@
 <template>
-  <section class="mt-20 contactme md:relative md:overflow-hidden md:mt-0 md:flex md:justify-center">
+  <section class="mx-auto mt-20 contactme md:relative md:overflow-hidden max-w-7xl md:mt-0 md:flex md:justify-center">
     <div class="relative px-10 md:w-min md:border-none md:m-24 md:py-10 md:px-12 md:bg-white md:shadow-lg md:rounded-2xl">
       <form class="flex flex-col items-center" action="#">
-        <h1 class="mx-10 mb-10 text-base font-bold text-center">
+        <h1 class="mx-10 text-xl font-bold text-center mb-14">
           Siéntese libre de contactarse conmigo y conversar
         </h1>
         <input class="w-64 mb-10 text-sm border-b-2 outline-none border-gray-200-jp md:w-96" type="text" placeholder="Su nombre" required>

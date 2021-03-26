@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex h-full bg-white rounded-md shadow-lg"
+    class="flex h-full bg-white rounded-md shadow-lg hover:shadow-2xl"
   >
     <div>
       <div class="relative w-full overflow-hidden rounded-t-xl">

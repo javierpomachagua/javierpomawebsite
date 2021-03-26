@@ -1,10 +1,10 @@
 <template>
   <div>
     <transition name="fade">
-      <mobile-menu v-if="showMenu" />
+      <mobile-menu v-if="showMenu" :is-blog="isBlog" />
     </transition>
     <div class="relative z-20 md:mb-40">
-      <desktop-header />
+      <desktop-header :is-blog="isBlog" />
       <mobile-header :show-menu="showMenu" @changeShowMenu="changeShowMenu" />
     </div>
   </div>
@@ -12,6 +12,12 @@
 
 <script>
 export default {
+  props: {
+    isBlog: {
+      type: Boolean,
+      default: false
+    }
+  },
   data () {
     return {
       showMenu: false

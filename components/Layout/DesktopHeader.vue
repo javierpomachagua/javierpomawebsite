@@ -4,17 +4,23 @@
       <logo />
     </nuxt-link>
     <span
+      v-if="!isBlog"
       class="px-2 py-1 text-lg font-medium bg-white rounded-lg cursor-pointer hover:bg-gray-800 hover:text-white"
       @click="scrollToElement('aboutme')"
     >Sobre mí</span>
     <span
+      v-if="!isBlog"
       class="px-2 py-1 text-lg font-medium bg-white rounded-lg cursor-pointer hover:bg-gray-800 hover:text-white"
       @click="scrollToElement('portfolio')"
     >Portafolio</span>
+    <nuxt-link v-if="isBlog" to="/" tag="span" class="px-2 py-1 text-lg font-medium bg-white rounded-lg cursor-pointer hover:bg-gray-800 hover:text-white">
+      Perfil
+    </nuxt-link>
     <nuxt-link :to="{ name: 'blog' }" tag="span" class="px-2 py-1 text-lg font-medium bg-white rounded-lg cursor-pointer hover:bg-gray-800 hover:text-white">
       Blog
     </nuxt-link>
     <span
+      v-if="!isBlog"
       class="px-2 py-1 text-lg font-medium bg-white rounded-lg cursor-pointer hover:bg-gray-800 hover:text-white"
       @click="scrollToElement('contactme')"
     >Contacto</span>
@@ -23,6 +29,12 @@
 
 <script>
 export default {
+  props: {
+    isBlog: {
+      type: Boolean,
+      default: false
+    }
+  },
   methods: {
     scrollToElement (name) {
       this.$scrollToElement(name)

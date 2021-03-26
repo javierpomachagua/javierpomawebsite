@@ -1,6 +1,6 @@
 <template>
   <div class="w-10/12 mx-auto ">
-    <the-header />
+    <the-header is-blog />
     <article class="mt-10 md:-mt-20">
       <figure>
         <img class="object-cover w-full rounded-xl image-cover" :src="require(`~/assets/img/posts/${post.image}`)" alt="">

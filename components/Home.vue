@@ -82,11 +82,7 @@ export default {
   },
   methods: {
     scrollToElement (name) {
-      const el = document.getElementsByClassName(name)[0]
-      if (el) {
-      // Use el.scrollIntoView() to instantly scroll to the element
-        el.scrollIntoView({ behavior: 'smooth' })
-      }
+      this.$scrollToElement(name)
     }
   }
 }

@@ -11,3 +11,16 @@
 .layout-leave-active {
   opacity: 0
 }
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(10px);
+}
+.fade-leave-active {
+  opacity: 0;
+  transform: translateX(10px);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .5s ease-in-out;
+}

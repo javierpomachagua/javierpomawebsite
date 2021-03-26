@@ -17,7 +17,7 @@
         </div>
         <hr class="my-2">
         <div class="hidden md:block md:my-8">
-          <nuxt-link :to="`blog/${firstPost.slug}`">
+          <nuxt-link :to="`/blog/${firstPost.slug}`">
             <div class="flex items-center">
               <figure class="relative w-2/3 overflow-hidden rounded-xl">
                 <img class="object-cover w-full h-84" :src="require(`~/assets/img/posts/${firstPost.image}`)" alt="">
@@ -34,12 +34,13 @@
             </div>
           </nuxt-link>
         </div>
+
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <nuxt-link :to="`blog/${firstPost.slug}`" class="block md:hidden">
+          <nuxt-link :to="`/blog/${firstPost.slug}`" class="block md:hidden">
             <post-preview :post="firstPost" />
           </nuxt-link>
           <template v-for="(post, index) in posts">
-            <nuxt-link :key="index" :to="`blog/${post.slug}`">
+            <nuxt-link :key="index" :to="`/blog/${post.slug}`">
               <post-preview :post="post" />
             </nuxt-link>
           </template>

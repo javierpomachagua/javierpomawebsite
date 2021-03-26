@@ -43,7 +43,7 @@
     </p>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
       <template v-for="(lastPost, index) in lastPosts">
-        <nuxt-link :key="index" :to="`blog/${lastPost.slug}`">
+        <nuxt-link :key="index" :to="`/blog/${lastPost.slug}`">
           <post-preview :post="lastPost" />
         </nuxt-link>
       </template>

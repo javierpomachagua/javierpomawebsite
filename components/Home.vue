@@ -9,7 +9,7 @@
         <figure>
           <img
             class="w-40 rounded-full shadow-2xl md:w-96"
-            src="~assets/img/profile.jpg"
+            src="/profile.jpg"
             alt="Imagen de Perfil"
           >
         </figure>

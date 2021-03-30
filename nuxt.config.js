@@ -1,3 +1,4 @@
+import { createSEOMeta } from './utils/seo'
 
 export default {
   /*
@@ -10,6 +11,12 @@ export default {
   ** See https://nuxtjs.org/api/configuration-target
   */
   target: 'static',
+  /**
+   * https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-env
+   */
+  env: {
+    HOST_NAME: process.env.HOST_NAME
+  },
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
@@ -19,7 +26,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      ...createSEOMeta({
+        title: 'Javier Pomachagua Pérez',
+        description: 'Desarrolador Fullstack Laravel & Nuxt',
+        image: process.env.HOST_NAME + '/profile.jpg',
+        url: process.env.HOST_NAME
+      })
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

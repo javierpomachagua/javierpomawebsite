@@ -14,27 +14,27 @@ export const createSEOMeta = ({ title, description, image, url }) => [
   },
   {
     hid: 'twitter:title',
-    name: 'twitter:title',
+    property: 'twitter:title',
     content: title
   },
   {
     hid: 'twitter:description',
-    name: 'twitter:description',
+    property: 'twitter:description',
     content: description
   },
   {
     hid: 'twitter:image',
-    name: 'twitter:image',
+    property: 'twitter:image',
     content: image
   },
   {
     hid: 'twitter:url',
-    name: 'twitter:url',
+    property: 'twitter:url',
     content: url
   },
   {
     hid: 'twitter:card',
-    name: 'twitter:card',
+    property: 'twitter:card',
     content: 'summary_large_image'
   }
 ]

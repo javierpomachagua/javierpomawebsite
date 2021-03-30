@@ -133,7 +133,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://javierpoma.com/blog/${this.$route.params.slug}`
+          href: `${process.env.HOST_NAME}/blog/${this.$route.params.slug}`
         }
       ]
     }

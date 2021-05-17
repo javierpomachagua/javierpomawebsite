@@ -15,21 +15,21 @@ projects:
     description: Gestionar las reservas y rastreo de los vehículos en mantenimiento.
     tags:
       - Laravel
-    image: project
+    image: taller.jpg
     category: 0
   - title: Four Fast Distribuidores
     description: Optimizar el registro de las ventas y de los productos en stock
     tags:
       - Laravel
       - Nuxt
-    image: project
+    image: ff.jpg
     category: 0
-  - title: Diagnóstico Rápido Participativo
-    description: Optmización del registro de las fichas de los especialistas a las instituciones educativas básicas.
-    tags:
-      - Laravel
-    image: project
-    category: 0
+  # - title: Diagnóstico Rápido Participativo
+  #   description: Optmización del registro de las fichas de los especialistas a las instituciones educativas básicas.
+  #   tags:
+  #     - Laravel
+  #   image: project
+  #   category: 0
   # - title: Aplicación de Gestión de Centro de Biomagnetismo Médico
   #   description: Registro del historial de las citas de los pacientes y sus pares biomagnéticos
   #   tags:

@@ -53,7 +53,7 @@ export default {
   },
   data () {
     return {
-      categoryActive: 2,
+      categoryActive: 0,
       about: { categories: [] }
     }
   },

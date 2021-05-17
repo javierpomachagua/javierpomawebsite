@@ -2,7 +2,7 @@
   <div>
     <Home />
     <AboutMe />
-    <Skills />
+    <!-- <Skills /> -->
     <Portfolio />
     <Clients />
     <Blog />

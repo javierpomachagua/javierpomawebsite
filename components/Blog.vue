@@ -16,7 +16,7 @@
       <div v-for="post in posts" :key="post.title" class="relative">
         <nuxt-link :to="`blog/${post.slug}`" class="group">
           <figure class="overflow-hidden">
-            <img class="object-cover w-full duration-700 transform h-84 md:opacity-70 group-hover:scale-150" :src="require(`~/assets/img/posts/${post.image}`)" alt="post">
+            <img class="object-cover w-full duration-700 transform h-84 group-hover:scale-150" :src="require(`~/assets/img/posts/${post.image}`)" alt="post">
           </figure>
           <div class="absolute bottom-0 w-full py-6 bg-gray-800 opacity-75 md:bg-gray-600 group-hover:bg-gray-800">
             <p class="mb-2 ml-10 text-xs text-white md:text-md">

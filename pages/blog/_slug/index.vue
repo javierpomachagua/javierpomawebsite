@@ -12,6 +12,9 @@
       <h1 class="mt-8 text-3xl font-bold text-center md:text-5xl">
         {{ post.title }}
       </h1>
+      <h3 class="mt-8 text-lg font-medium text-center text-gray-600 md:text-xl">
+        {{ post.description }}
+      </h3>
       <div class="flex flex-wrap justify-center mt-6">
         <template v-for="tag in post.tags">
           <div

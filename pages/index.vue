@@ -1,13 +1,13 @@
 <template>
   <div>
     <Home />
-    <AboutMe />
+    <!-- <AboutMe /> -->
     <!-- <Skills /> -->
-    <Portfolio />
+    <!-- <Portfolio />
     <Clients />
     <Blog />
     <ContactMe />
-    <Footer />
+    <Footer /> -->
   </div>
 </template>
 

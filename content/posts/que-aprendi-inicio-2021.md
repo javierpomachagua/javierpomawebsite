@@ -4,6 +4,12 @@ description: Un breve resumen de lo que aprendí en los primeros meses del año.
 date: 2021/03/26
 image: learning.jpg
 tags:
+  - roadmapDeveloper
+  - eLearning
+  - wordpress
+  - jamstack
+  - laravel
+  - php
 ---
 
 Desde comienzos de año quise escribir mi primer blog luego de mucho procastinar por fin cumplo una meta que tenía hace tiempo. No sabía exactamente por dónde empezar asi que me decidí por escribir un resumen de lo que he aprendido en los primeros meses del año.

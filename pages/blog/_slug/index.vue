@@ -15,7 +15,7 @@
       <h3 class="mt-8 text-lg font-medium text-center text-gray-600 md:text-xl">
         {{ post.description }}
       </h3>
-      <div class="flex flex-wrap justify-center mt-6">
+      <!-- <div class="flex flex-wrap justify-center mt-6">
         <template v-for="tag in post.tags">
           <div
             :key="tag"
@@ -25,7 +25,7 @@
             {{ tag }}
           </div>
         </template>
-      </div>
+      </div> -->
       <nuxt-content
         :document="post"
         class="mx-auto mt-10 prose prose-md lg:prose-lg"
@@ -41,8 +41,8 @@
           :url="postUrl"
           :title="post.title"
           :description="post.description"
-          quote="The hot reload is so fast it\'s near instant. - Evan You"
-          hashtags="vuejs,vite"
+          :quote="post.description"
+          :hashtags="postTags"
         >
           <img class="w-10 h-10" src="~assets/svg/linkedin.svg" alt="">
         </ShareNetwork>
@@ -51,8 +51,8 @@
           :url="postUrl"
           :title="post.title"
           :description="post.description"
-          quote="The hot reload is so fast it\'s near instant. - Evan You"
-          hashtags="vuejs,vite"
+          :quote="post.description"
+          :hashtags="postTags"
         >
           <img class="w-10 h-10" src="~assets/svg/twitter.svg" alt="">
         </ShareNetwork>
@@ -61,8 +61,8 @@
           :url="postUrl"
           :title="post.title"
           :description="post.description"
-          quote="The hot reload is so fast it\'s near instant. - Evan You"
-          hashtags="vuejs,vite"
+          :quote="post.description"
+          :hashtags="postTags"
         >
           <img
             class="w-10 h-10 text-blue-600 rounded-full"
@@ -100,29 +100,18 @@ export default {
     }
   },
   layout: 'blog',
-  data () {
-    return {
-      tags: [
-        { name: 'Laravel', classes: 'bg-red-200' },
-        { name: 'Nuxt', classes: 'bg-green-200' },
-        { name: 'Tailwind CSS', classes: 'bg-blue-200' },
-        { name: 'Productividad', classes: 'bg-gray-200' },
-        { name: 'Personal', classes: 'bg-gray-200' }
-      ]
-    }
-  },
   computed: {
     postTags () {
-      return this.post.tags
+      return this.post.tags.join(',')
     },
     postUrl () {
       return `${process.env.HOST_NAME}/blog/${this.$route.params.slug}`
     }
   },
   methods: {
-    tagClasses (tag) {
-      return this.tags.find(item => item.name === tag).classes || 'bg-gray-200'
-    }
+    // tagClasses (tag) {
+    //   return this.post.tags.find(item => item.name === tag).classes || 'bg-gray-200'
+    // }
   },
   head () {
     const { title, description, image, slug } = this.post

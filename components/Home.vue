@@ -1,17 +1,17 @@
 <template>
   <div class="relative z-20 m-0 mx-auto overflow-hidden max-w-7xl home md:pb-20">
-    <the-header />
+    <layout-the-header />
     <div class="absolute z-10 transform rotate-45 -right-24 -top-20 from-blue-100-jp to-blue-jp bg-gradient-to-b w-80 h-80 rounded-3xl bg-square" />
     <div
       class="relative z-20 flex flex-col items-center m-20 mt-10 md:flex-row-reverse md:justify-evenly md:items-center"
     >
       <div class="flex flex-col items-center">
         <figure>
-          <img
+          <nuxt-img
             class="w-40 rounded-full shadow-2xl md:w-96"
             src="/profile.jpg"
             alt="Imagen de Perfil"
-          >
+          />
         </figure>
         <div class="flex justify-center mt-6 space-x-4 md:justify-start">
           <a

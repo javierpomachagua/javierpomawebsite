@@ -37,10 +37,10 @@
     </div>
     <div class="bg-square-2 from-blue-100-jp to-blue-jp bg-gradient-to-b" />
     <figure class="mx-10 my-8 md:mr-10">
-      <img
+      <nuxt-img
         class="object-cover rounded-lg shadow-xl w-96 h-96 md:float-right"
-        src="~assets/img/about.jpg"
-      >
+        src="/about.jpg"
+      />
     </figure>
   </section>
 </template>

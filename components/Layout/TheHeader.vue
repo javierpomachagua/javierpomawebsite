@@ -1,11 +1,11 @@
 <template>
   <div>
     <transition name="fade">
-      <mobile-menu v-if="showMenu" :is-blog="isBlog" />
+      <layout-mobile-menu v-if="showMenu" :is-blog="isBlog" />
     </transition>
     <div class="relative z-20 md:mb-40">
-      <desktop-header :is-blog="isBlog" />
-      <mobile-header :show-menu="showMenu" @changeShowMenu="changeShowMenu" />
+      <layout-desktop-header :is-blog="isBlog" />
+      <layout-mobile-header :show-menu="showMenu" @changeShowMenu="changeShowMenu" />
     </div>
   </div>
 </template>

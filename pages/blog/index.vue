@@ -1,6 +1,6 @@
 <template>
   <div>
-    <the-header is-blog />
+    <layout-the-header is-blog />
     <div class="max-w-7xl md:mx-44">
       <div class="p-4 mt-16">
         <div class="py-8 -mt-12 text-white rounded-md md:py-12 md:-mt-32 bg-blue-jp">

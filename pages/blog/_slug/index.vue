@@ -1,6 +1,6 @@
 <template>
   <div class="w-10/12 mx-auto">
-    <the-header is-blog />
+    <layout-the-header is-blog />
     <article class="mt-10 md:-mt-20">
       <figure>
         <img

@@ -64,7 +64,9 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     // Doc: https://github.com/nuxt/image
-    '@nuxt/image'
+    '@nuxt/image',
+    // Doc: https://github.com/nuxt-community/google-analytics-module
+    '@nuxtjs/google-analytics'
   ],
   /*
   ** Nuxt.js modules
@@ -98,5 +100,9 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
   }
 }

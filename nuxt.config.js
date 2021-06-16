@@ -24,7 +24,7 @@ export default {
       ...createSEOMeta({
         title: 'Javier Pomachagua Pérez',
         description: 'Desarrolador Fullstack Laravel & Nuxt',
-        image: process.env.HOST_NAME + '/profile.jpg',
+        image: 'https://res.cloudinary.com/dy09hqrno/image/upload/v1623886883/Foto_Perfil_tscpeg.jpg',
         url: process.env.HOST_NAME
       })
     ],

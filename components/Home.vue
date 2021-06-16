@@ -8,6 +8,7 @@
       <div class="flex flex-col items-center">
         <figure>
           <nuxt-img
+            provider="cloudinary"
             class="w-40 rounded-full shadow-2xl md:w-96"
             width="350"
             height="350"

@@ -3,11 +3,11 @@
     <layout-the-header is-blog />
     <article class="mt-10 md:-mt-20">
       <figure>
-        <img
+        <nuxt-img
           class="object-cover w-full rounded-xl image-cover"
-          :src="require(`~/assets/img/posts/${post.image}`)"
-          alt=""
-        >
+          :src="post.image"
+          :alt="post.title"
+        />
       </figure>
       <h1 class="mt-8 text-3xl font-bold text-center md:text-5xl">
         {{ post.title }}
@@ -44,7 +44,7 @@
           :quote="post.description"
           :hashtags="postTags"
         >
-          <img class="w-10 h-10" src="~assets/svg/linkedin.svg" alt="">
+          <icon-linkedin class="w-10 h-10" alt="linkedin icon" />
         </ShareNetwork>
         <ShareNetwork
           network="twitter"
@@ -54,7 +54,7 @@
           :quote="post.description"
           :hashtags="postTags"
         >
-          <img class="w-10 h-10" src="~assets/svg/twitter.svg" alt="">
+          <icon-twitter class="w-10 h-10" alt="twitter icon" />
         </ShareNetwork>
         <ShareNetwork
           network="facebook"
@@ -64,11 +64,10 @@
           :quote="post.description"
           :hashtags="postTags"
         >
-          <img
+          <icon-facebook
             class="w-10 h-10 text-blue-600 rounded-full"
-            src="~assets/svg/facebook.svg"
-            alt=""
-          >
+            alt="facebook icon"
+          />
         </ShareNetwork>
       </div>
     </div>
@@ -87,9 +86,17 @@
 </template>
 
 <script>
+import IconFacebook from '@/assets/icons/facebook.svg?inline'
+import IconLinkedin from '@/assets/icons/linkedin.svg?inline'
+import IconTwitter from '@/assets/icons/twitter.svg?inline'
 import { createSEOMeta } from '~/utils/seo'
 
 export default {
+  components: {
+    IconFacebook,
+    IconLinkedin,
+    IconTwitter
+  },
   async asyncData ({ $content, params }) {
     const post = await $content('posts', params.slug).fetch()
     const lastPosts = await $content('posts').sortBy('createdAt', 'desc').skip(1).limit(4).fetch()
@@ -106,6 +113,10 @@ export default {
     },
     postUrl () {
       return `${process.env.HOST_NAME}/blog/${this.$route.params.slug}`
+    },
+    postImageUrl () {
+      return this.$cloudinary.image
+        .url(`${this.post.image}`)
     }
   },
   methods: {
@@ -114,12 +125,12 @@ export default {
     // }
   },
   head () {
-    const { title, description, image, slug } = this.post
+    const { title, description, slug } = this.post
 
     return {
       title: `${title} - Javier Pomachagua Pérez`,
       meta: [
-        ...createSEOMeta({ title, description, image: process.env.HOST_NAME + require(`~/assets/img/posts/${image}`), url: process.env.HOST_NAME + `/blog/${slug}` })
+        ...createSEOMeta({ title, description, image: this.postImageUrl, url: process.env.HOST_NAME + `/blog/${slug}` })
       ],
       link: [
         {

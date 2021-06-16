@@ -9,7 +9,9 @@
         <figure>
           <nuxt-img
             class="w-40 rounded-full shadow-2xl md:w-96"
-            src="/profile.jpg"
+            width="350"
+            height="350"
+            src="profile_photo"
             alt="Imagen de Perfil"
           />
         </figure>
@@ -19,21 +21,21 @@
             target="_blank"
             class="transition-all duration-500 ease-in-out transform hover:-translate-y-3"
           >
-            <img class="w-10 h-10" src="~assets/svg/linkedin.svg" alt="">
+            <icon-linkedin class="w-10 h-10" alt="linkedin icon" />
           </a>
           <a
             href="https://github.com/javierpomachagua"
             target="_blank"
             class="transition-all duration-500 ease-in-out transform hover:-translate-y-3"
           >
-            <img class="w-10 h-10" src="~assets/svg/github.svg" alt="">
+            <icon-github class="w-10 h-10" alt="github icon" />
           </a>
           <a
             href="https://twitter.com/javipomachagua"
             target="_blank"
             class="transition-all duration-500 ease-in-out transform hover:-translate-y-3"
           >
-            <img class="w-10 h-10" src="~assets/svg/twitter.svg" alt="">
+            <icon-twitter class="w-10 h-10" alt="twitter icon" />
           </a>
         </div>
       </div>
@@ -50,12 +52,12 @@
         <div
           class="flex items-center justify-center mt-6 space-x-4 md:justify-start"
         >
-          <img class="w-12 h-12" src="~assets/img/php-icon.png" alt="">
-          <img class="w-10 h-10" src="~assets/img/laravel-icon.png" alt="">
-          <img class="w-10 h-10" src="~assets/img/javascript-icon.png" alt="">
-          <img class="w-10 h-10" src="~assets/img/vue-icon.png" alt="">
-          <img class="w-10 h-10" src="~assets/svg/nuxt.svg" alt="">
-          <img class="w-10 h-10" src="~assets/svg/tailwind.svg" alt="">
+          <nuxt-img class="w-12 h-12" src="php-icon_mxzwjr" alt="php icon" />
+          <nuxt-img class="w-10 h-10" src="laravel-icon_velzrk" alt="laravel icon" />
+          <nuxt-img class="w-10 h-10" src="javascript-icon_vzwdso" alt="js icon" />
+          <nuxt-img class="w-10 h-10" src="vue-icon_l2psht" alt="vue icon" />
+          <icon-nuxt class="w-10 h-10" alt="nuxt icon" />
+          <icon-tailwind class="w-10 h-10" alt="tailwind icon" />
         </div>
         <button
           class="w-full px-4 py-2 mt-6 text-xl font-medium text-white transform rounded-full bg-blue-100-jp hover:bg-blue-jp"
@@ -69,7 +71,20 @@
 </template>
 
 <script>
+import IconNuxt from '@/assets/icons/nuxt.svg?inline'
+import IconTailwind from '@/assets/icons/tailwind.svg?inline'
+import IconTwitter from '@/assets/icons/twitter.svg?inline'
+import IconGithub from '@/assets/icons/github.svg?inline'
+import IconLinkedin from '@/assets/icons/linkedin.svg?inline'
+
 export default {
+  components: {
+    IconNuxt,
+    IconTailwind,
+    IconTwitter,
+    IconGithub,
+    IconLinkedin
+  },
   async fetch () {
     const home = await this.$content('home').fetch()
     this.home = home

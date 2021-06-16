@@ -66,7 +66,9 @@ export default {
     // Doc: https://github.com/nuxt/image
     '@nuxt/image',
     // Doc: https://github.com/nuxt-community/google-analytics-module
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    // Doc: https://github.com/nuxt-community/svg-module/ https://github.com/nuxt-community/svg-module
+    '@nuxtjs/svg'
   ],
   /*
   ** Nuxt.js modules
@@ -77,7 +79,9 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     // https://github.com/nicolasbeauvais/vue-social-sharing
-    'vue-social-sharing/nuxt'
+    'vue-social-sharing/nuxt',
+    // Doc: https://cloudinary.nuxtjs.org/
+    '@nuxtjs/cloudinary'
   ],
   /*
   ** Axios module configuration
@@ -104,5 +108,16 @@ export default {
 
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID
+  },
+
+  image: {
+    cloudinary: {
+      baseURL: process.env.CLOUDINARY_URL
+    }
+  },
+
+  cloudinary: {
+    cloudName: process.env.CLOUDINARY_ID,
+    useComponent: true
   }
 }

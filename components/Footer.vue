@@ -131,14 +131,19 @@
         </svg>
       </a>
     </div>
-    <p class="footer__signature">
-      Diseñado con  <img src="~assets/img/heart.svg">  por Javier Pomachagua Pérez
+    <p class="text-xs text-center">
+      Diseñado con  <icon-heart class="inline-block w-4 h-4 mx-2" />  por Javier Pomachagua Pérez
     </p>
   </footer>
 </template>
 
 <script>
+import IconHeart from '@/assets/icons/heart.svg?inline'
+
 export default {
+  components: {
+    IconHeart
+  },
   methods: {
     scrollToElement (name) {
       const el = document.getElementsByClassName(name)[0]
@@ -166,11 +171,5 @@ export default {
 }
 .footer__social-network {
   @apply w-10 h-10 bg-blue-100-jp rounded-full p-2 mr-4 flex justify-center items-center
-}
-.footer__signature {
-  @apply text-xs text-center
-}
-.footer__signature img {
-  @apply w-4 h-4 inline-block mx-2
 }
 </style>

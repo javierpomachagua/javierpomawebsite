@@ -7,7 +7,7 @@
       class="relative w-5 md:hidden"
       @click="changeShowMenu()"
     >
-      <img src="~assets/img/open-menu.png" alt="Menú">
+      <nuxt-img src="open-menu_ya6lwq" alt="Menú" />
     </div>
   </div>
 </template>

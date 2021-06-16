@@ -39,7 +39,9 @@
     <figure class="mx-10 my-8 md:mr-10">
       <nuxt-img
         class="object-cover rounded-lg shadow-xl w-96 h-96 md:float-right"
-        src="/about.jpg"
+        src="about_zvodlb"
+        height="500"
+        width="500"
       />
     </figure>
   </section>

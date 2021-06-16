@@ -20,7 +20,7 @@
           <nuxt-link :to="`/blog/${firstPost.slug}`">
             <div class="flex items-center">
               <figure class="relative w-2/3 overflow-hidden rounded-xl">
-                <img class="object-cover w-full h-84" :src="require(`~/assets/img/posts/${firstPost.image}`)" alt="">
+                <nuxt-img class="object-cover w-full h-84" :src="firstPost.image" :alt="firstPost.title" />
               </figure>
               <div class="w-1/3 ml-6">
                 <small class="text-xs italic text-gray-400">{{ firstPost.date }}</small>

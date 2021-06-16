@@ -4,11 +4,11 @@
   >
     <div>
       <div class="relative w-full overflow-hidden rounded-t-xl">
-        <img
+        <nuxt-img
           class="object-cover w-full h-52"
-          :src="require(`~/assets/img/posts/${post.image}`)"
-          alt=""
-        >
+          :src="post.image"
+          :alt="post.title"
+        />
       </div>
       <div class="px-4 py-4 overflow-hidden bg-white rounded-b-xl">
         <small class="text-xs italic text-gray-400">{{ post.date }}</small>

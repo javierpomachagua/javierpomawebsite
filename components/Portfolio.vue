@@ -21,7 +21,7 @@
     <div class="grid grid-cols-1 gap-0 md:grid-cols-3">
       <div v-for="project in projectsFiltered" :key="project.title" class="portfolio__project">
         <figure>
-          <img class="md:h-72 md:w-full md:object-cover" :src="require(`~/assets/img/projects/${project.image}`)" alt="Project">
+          <nuxt-img class="md:h-72 md:w-full md:object-cover" :src="project.image" width="400" height="300" alt="Project" />
         </figure>
         <div class="py-6 portfolio__project-description bg-blue-100-jp md:hidden">
           <div class="portfolio__project-tags">

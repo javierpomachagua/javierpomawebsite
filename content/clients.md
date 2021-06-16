@@ -7,10 +7,10 @@ testimonials:
       author: Jorge Dávila
       title: Consultor en Ministerio de Educación del Perú - Minedu
       text: Muy bueno, proactivo y orientado al resultado
-      image: jorge.jpg
+      image: jorge_r1pd0w.jpg
     - id: 2
       author: Felipe Sallato
       title: Jefe de Proyectos Senior en Dirección de Educación Pública
       text: Excelente trabajo
-      image: felipe.jpg
+      image: felipe_pfydyy.jpg
 ---

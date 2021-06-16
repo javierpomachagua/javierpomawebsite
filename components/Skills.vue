@@ -8,7 +8,7 @@
     </p>
     <div class="grid m-10 mt-5 md:grid-cols-3 md:mb-0 sm:grid-cols-2">
       <div v-for="service in skills.services" :key="service.name" class="skills__category">
-        <img class="skills__category-image" :src="require(`../assets/img/${service.icon}`)" alt="Sistemas Personalizados">
+        <!-- <img class="skills__category-image" :src="require(`../assets/img/${service.icon}`)" alt="Sistemas Personalizados"> -->
         <h1 class="skills__category-title">
           {{ service.name }}
         </h1>

@@ -39,30 +39,29 @@
               <icon-quote
                 class="hidden md:block md:mb-2"
                 alt="icon quote"
+              />
+              <p
+                class="mb-4 text-sm text-center text-gray-jp md:text-left md:text-lg"
               >
-                <p
-                  class="mb-4 text-sm text-center text-gray-jp md:text-left md:text-lg"
-                >
-                  {{ testimonial.text }}
-                </p>
-                <h2 class="text-base font-bold sm:text-xl">
-                  {{ testimonial.author }}
-                </h2>
-                <h3
-                  class="mb-4 text-base text-center md:px-0 md:text-left sm:text-xl"
-                >
-                  {{ testimonial.title }}
-                </h3>
-                <div class="flex flex-row">
-                  <template v-for="n in clients.testimonials.length">
-                    <div
-                      :key="n"
-                      class="w-6 h-2 mr-2"
-                      :class="n === index + 1 ? 'bg-blue-500' : 'bg-gray-100-jp'"
-                    />
-                  </template>
-                </div>
-              </icon-quote>
+                {{ testimonial.text }}
+              </p>
+              <h2 class="text-base font-bold sm:text-xl">
+                {{ testimonial.author }}
+              </h2>
+              <h3
+                class="mb-4 text-base text-center md:px-0 md:text-left sm:text-xl"
+              >
+                {{ testimonial.title }}
+              </h3>
+              <div class="flex flex-row">
+                <template v-for="n in clients.testimonials.length">
+                  <div
+                    :key="n"
+                    class="w-6 h-2 mr-2"
+                    :class="n === index + 1 ? 'bg-blue-500' : 'bg-gray-100-jp'"
+                  />
+                </template>
+              </div>
             </div>
           </div>
         </div>

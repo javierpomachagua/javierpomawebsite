@@ -10,7 +10,7 @@ testimonials:
       image: jorge_r1pd0w.jpg
     - id: 2
       author: Felipe Sallato
-      title: Jefe de Proyectos Senior en Dirección de Educación Pública
+      title: Jefe de Proyectos Senior en Dirección de Educación Pública de Chile
       text: Excelente trabajo
       image: felipe_pfydyy.jpg
 ---

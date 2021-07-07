@@ -127,10 +127,5 @@ export default {
       name: 'Javier Pomachagua Pérez',
       lang: 'es'
     }
-  },
-
-  // https://nuxtjs.org/faq/netlify-deployment
-  generate: {
-    fallback: true
   }
 }

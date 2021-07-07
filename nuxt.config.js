@@ -2,9 +2,9 @@ import { createSEOMeta } from './utils/seo'
 
 export default {
   /*
-  ** Nuxt target
-  ** See https://nuxtjs.org/api/configuration-target
-  */
+   ** Nuxt target
+   ** See https://nuxtjs.org/api/configuration-target
+   */
   target: 'static',
   /**
    * https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-env
@@ -13,9 +13,9 @@ export default {
     HOST_NAME: process.env.HOST_NAME
   },
   /*
-  ** Headers of the page
-  ** See https://nuxtjs.org/api/configuration-head
-  */
+   ** Headers of the page
+   ** See https://nuxtjs.org/api/configuration-head
+   */
   head: {
     title: 'Javier Pomachagua Pérez',
     meta: [
@@ -24,7 +24,8 @@ export default {
       ...createSEOMeta({
         title: 'Javier Pomachagua Pérez',
         description: 'Desarrolador Fullstack Laravel & Nuxt',
-        image: 'https://res.cloudinary.com/dy09hqrno/image/upload/v1623886883/Foto_Perfil_tscpeg.jpg',
+        image:
+          'https://res.cloudinary.com/dy09hqrno/image/upload/v1623886883/Foto_Perfil_tscpeg.jpg',
         url: process.env.HOST_NAME
       })
     ],
@@ -38,26 +39,22 @@ export default {
     ]
   },
   /*
-  ** Global CSS
-  */
-  css: [
-    '@/assets/css/main.css'
-  ],
+   ** Global CSS
+   */
+  css: ['@/assets/css/main.css'],
   /*
-  ** Plugins to load before mounting the App
-  ** https://nuxtjs.org/guide/plugins
-  */
-  plugins: [
-    '~/plugins/helpers.js'
-  ],
+   ** Plugins to load before mounting the App
+   ** https://nuxtjs.org/guide/plugins
+   */
+  plugins: ['~/plugins/helpers.js'],
   /*
-  ** Auto import components
-  ** See https://nuxtjs.org/api/configuration-components
-  */
+   ** Auto import components
+   ** See https://nuxtjs.org/api/configuration-components
+   */
   components: true,
   /*
-  ** Nuxt.js dev-modules
-  */
+   ** Nuxt.js dev-modules
+   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
@@ -68,13 +65,11 @@ export default {
     // Doc: https://github.com/nuxt-community/google-analytics-module
     '@nuxtjs/google-analytics',
     // Doc: https://github.com/nuxt-community/svg-module/ https://github.com/nuxt-community/svg-module
-    '@nuxtjs/svg',
-    // Doc: https://pwa.nuxtjs.org/
-    '@nuxtjs/pwa'
+    '@nuxtjs/svg'
   ],
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
@@ -83,17 +78,19 @@ export default {
     // https://github.com/nicolasbeauvais/vue-social-sharing
     'vue-social-sharing/nuxt',
     // Doc: https://cloudinary.nuxtjs.org/
-    '@nuxtjs/cloudinary'
+    '@nuxtjs/cloudinary',
+    // Doc: https://pwa.nuxtjs.org/
+    '@nuxtjs/pwa'
   ],
   /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
   axios: {},
   /*
-  ** Content module configuration
-  ** See https://content.nuxtjs.org/configuration
-  */
+   ** Content module configuration
+   ** See https://content.nuxtjs.org/configuration
+   */
   content: {
     markdown: {
       prism: {
@@ -102,11 +99,10 @@ export default {
     }
   },
   /*
-  ** Build configuration
-  ** See https://nuxtjs.org/api/configuration-build/
-  */
-  build: {
-  },
+   ** Build configuration
+   ** See https://nuxtjs.org/api/configuration-build/
+   */
+  build: {},
 
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID

@@ -65,9 +65,7 @@ export default {
     // Doc: https://github.com/nuxt-community/google-analytics-module
     '@nuxtjs/google-analytics',
     // Doc: https://github.com/nuxt-community/svg-module/ https://github.com/nuxt-community/svg-module
-    '@nuxtjs/svg',
-    // Doc: https://pwa.nuxtjs.org/
-    '@nuxtjs/pwa'
+    '@nuxtjs/svg'
   ],
   /*
    ** Nuxt.js modules
@@ -80,7 +78,9 @@ export default {
     // https://github.com/nicolasbeauvais/vue-social-sharing
     'vue-social-sharing/nuxt',
     // Doc: https://cloudinary.nuxtjs.org/
-    '@nuxtjs/cloudinary'
+    '@nuxtjs/cloudinary',
+    // Doc: https://pwa.nuxtjs.org/
+    '@nuxtjs/pwa'
   ],
   /*
    ** Axios module configuration

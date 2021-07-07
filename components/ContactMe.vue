@@ -11,7 +11,6 @@
       <form
         class="flex flex-col items-center"
         method="POST"
-        data-netlify="true"
       >
         <input
           class="w-64 mb-10 text-sm border-b-2 outline-none border-gray-200-jp md:w-96"

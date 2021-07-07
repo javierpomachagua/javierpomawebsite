@@ -68,7 +68,9 @@ export default {
     // Doc: https://github.com/nuxt-community/google-analytics-module
     '@nuxtjs/google-analytics',
     // Doc: https://github.com/nuxt-community/svg-module/ https://github.com/nuxt-community/svg-module
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    // Doc: https://pwa.nuxtjs.org/
+    '@nuxtjs/pwa'
   ],
   /*
   ** Nuxt.js modules

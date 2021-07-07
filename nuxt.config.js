@@ -127,5 +127,11 @@ export default {
       name: 'Javier Pomachagua Pérez',
       lang: 'es'
     }
+  },
+  /*
+   ** Exclude from generation
+   */
+  generate: {
+    fallback: true
   }
 }

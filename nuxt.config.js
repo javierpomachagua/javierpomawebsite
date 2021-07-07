@@ -117,5 +117,20 @@ export default {
   cloudinary: {
     cloudName: process.env.CLOUDINARY_ID,
     useComponent: true
+  },
+
+  pwa: {
+    meta: {
+      title: 'Javier Pomachagua Pérez'
+    },
+    manifest: {
+      name: 'Javier Pomachagua Pérez',
+      lang: 'es'
+    }
+  },
+
+  // https://nuxtjs.org/faq/netlify-deployment
+  generate: {
+    fallback: true
   }
 }

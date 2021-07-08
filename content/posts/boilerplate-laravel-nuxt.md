@@ -2,7 +2,7 @@
 title: Laravel + Nuxt Authentication in few minutes
 description: Esta es una plantilla de una aplicación Nuxt conectada a una aplicación Laravel mediante Sanctum
 date: 2021/07/07
-image: posts/learning_qqs9c2
+image: posts/login_jzhyji
 tags:
   - nuxt
   - laravel

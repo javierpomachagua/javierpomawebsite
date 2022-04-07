@@ -1,6 +1,6 @@
 <template>
   <div>
-    <the-header />
+    <the-header is-blog />
     <div class="max-w-7xl md:mx-44">
       <div class="p-4 mt-16">
         <div

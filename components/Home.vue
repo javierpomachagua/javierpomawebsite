@@ -1,7 +1,11 @@
 <template>
-  <div class="relative z-20 m-0 mx-auto overflow-hidden max-w-7xl home md:pb-20">
+  <div
+    class="relative z-20 m-0 mx-auto overflow-hidden max-w-7xl home md:pb-20"
+  >
     <layout-the-header />
-    <div class="absolute z-10 transform rotate-45 -right-24 -top-20 from-blue-100-jp to-blue-jp bg-gradient-to-b w-80 h-80 rounded-3xl bg-square" />
+    <div
+      class="absolute z-10 transform rotate-45 -right-24 -top-20 from-blue-100-jp to-blue-jp bg-gradient-to-b w-80 h-80 rounded-3xl bg-square"
+    />
     <div
       class="relative z-20 flex flex-col items-center m-20 mt-10 md:flex-row-reverse md:justify-evenly md:items-center"
     >
@@ -54,17 +58,25 @@
           class="flex items-center justify-center mt-6 space-x-4 md:justify-start"
         >
           <nuxt-img class="w-12 h-12" src="php-icon_mxzwjr" alt="php icon" />
-          <nuxt-img class="w-10 h-10" src="laravel-icon_velzrk" alt="laravel icon" />
-          <nuxt-img class="w-10 h-10" src="javascript-icon_vzwdso" alt="js icon" />
+          <nuxt-img
+            class="w-10 h-10"
+            src="laravel-icon_velzrk"
+            alt="laravel icon"
+          />
+          <nuxt-img
+            class="w-10 h-10"
+            src="javascript-icon_vzwdso"
+            alt="js icon"
+          />
           <nuxt-img class="w-10 h-10" src="vue-icon_l2psht" alt="vue icon" />
           <icon-nuxt class="w-10 h-10" alt="nuxt icon" />
           <icon-tailwind class="w-10 h-10" alt="tailwind icon" />
         </div>
         <button
           class="w-full px-4 py-2 mt-6 text-xl font-medium text-white transform rounded-full bg-blue-100-jp hover:bg-blue-jp"
-          @click="scrollToElement('contactme')"
+          @click="scrollToElement('portfolio')"
         >
-          Contáctame
+          Ver Portafolio
         </button>
       </div>
     </div>
@@ -86,18 +98,18 @@ export default {
     IconGithub,
     IconLinkedin
   },
-  async fetch () {
+  async fetch() {
     const home = await this.$content('home').fetch()
     this.home = home
   },
-  data () {
+  data() {
     return {
       home: {},
       showMenu: false
     }
   },
   methods: {
-    scrollToElement (name) {
+    scrollToElement(name) {
       this.$scrollToElement(name)
     }
   }

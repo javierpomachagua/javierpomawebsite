@@ -35,7 +35,7 @@ Tiene las siguientes funciones:
   <div class='px-2 py-1 rounded-lg bg-red-200'>
     Laravel
   </div>
-  <div class='px-2 py-1 rounded-lg bg-red-200'>
+  <div class='px-2 py-1 rounded-lg bg-orange-200'>
     Livewire
   </div>
   <div class='px-2 py-1 rounded-lg bg-green-200'>

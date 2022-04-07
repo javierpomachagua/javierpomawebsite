@@ -24,7 +24,7 @@
                 <div
                   class="md:flex md:flex-row md:items-center md:justify-center h-full"
                 >
-                  <figure class="md:mx-10">
+                  <figure class="md:mx-10 h-full">
                     <nuxt-img
                       class="object-contain w-full h-full mx-auto shadow-lg"
                       :src="image"
@@ -62,7 +62,6 @@ export default {
   layout: 'blog',
   async asyncData({ $content, params }) {
     const project = await $content('projects', params.slug).fetch()
-    console.log(project)
     return {
       project
     }

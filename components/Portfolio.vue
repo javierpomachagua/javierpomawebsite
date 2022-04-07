@@ -55,6 +55,13 @@
           </p>
         </div>
       </div>
+      <nuxt-link to="projects">
+        <div
+          class="relative flex items-center justify-center text-4xl font-bold text-gray-200 bg-gray-600 md:h-72 h-36 opacity-70 hover:bg-gray-700"
+        >
+          Ver más
+        </div>
+      </nuxt-link>
     </div>
   </section>
 </template>

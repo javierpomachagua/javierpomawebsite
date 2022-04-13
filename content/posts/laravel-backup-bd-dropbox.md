@@ -204,6 +204,6 @@ Para un próximo artículo estaré publicando de qué manera lo podemos hacer au
 sin estar ejecutando manualmente <code>php artisan backup:run</code>
 
 Dejo el link del proyecto
-<a href="https://github.com/javierpomachagua/laravel-backup-dropbox">
+<a href="https://github.com/javierpomachagua/laravel-backup-dropbox" target="_blank">
   <img width="200" src="https://res.cloudinary.com/dy09hqrno/image/upload/v1649865728/GitHub-logo-2-imagen_e9yypq.jpg">
 </a>

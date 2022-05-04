@@ -2,7 +2,10 @@
   <section
     class="relative flex flex-col items-center mx-auto mb-10 overflow-hidden max-w-7xl aboutme md:flex-row-reverse md:py-44"
   >
-    <div v-if="!$fetchState.pending" class="flex flex-col items-center md:items-start md:w-1/2">
+    <div
+      v-if="!$fetchState.pending"
+      class="flex flex-col items-center md:items-start md:w-1/2"
+    >
       <p class="about__intro">
         Un poco
       </p>
@@ -27,7 +30,7 @@
           {{ categorySelected.text }}
         </p>
         <a
-          href="https://drive.google.com/file/d/1A5-kuxP61_TWwKxwDAh08-J72JYt44-4/view?usp=sharing"
+          href="https://drive.google.com/file/d/1qioooJj1hQ7LfZIh4FMwn1LXJLQ9115B/view?usp=sharing"
           target="_blank"
           class="w-48 px-4 py-2 mt-10 text-center text-white rounded-full bg-blue-100-jp hover:bg-blue-jp md:mt-5"
         >
@@ -49,23 +52,25 @@
 
 <script>
 export default {
-  async fetch () {
+  async fetch() {
     const about = await this.$content('about').fetch()
     this.about = about
   },
-  data () {
+  data() {
     return {
       categoryActive: 0,
       about: { categories: [] }
     }
   },
   computed: {
-    categorySelected () {
-      return this.about.categories.filter((tab, index) => index === this.categoryActive)[0]
+    categorySelected() {
+      return this.about.categories.filter(
+        (tab, index) => index === this.categoryActive
+      )[0]
     }
   },
   methods: {
-    changeTab (index) {
+    changeTab(index) {
       this.categoryActive = index
     }
   }
@@ -74,44 +79,44 @@ export default {
 
 <style>
 .about {
-  @apply mb-10 flex flex-col items-center
+  @apply mb-10 flex flex-col items-center;
 }
 .about__body {
-  @apply flex flex-col items-center
+  @apply flex flex-col items-center;
 }
 .about__intro {
   @apply text-lg text-black-jp;
 }
 .about__title {
-  @apply text-3xl font-bold text-black-jp
+  @apply text-3xl font-bold text-black-jp;
 }
 .about__sections {
-  @apply mt-4 flex justify-around
+  @apply mt-4 flex justify-around;
 }
 .about__sections h3 {
-  @apply ml-4 flex flex-col items-center justify-center text-justify cursor-pointer
+  @apply ml-4 flex flex-col items-center justify-center text-justify cursor-pointer;
 }
 .about__description {
-  @apply text-sm mt-4 text-gray-jp text-justify mx-12
+  @apply text-sm mt-4 text-gray-jp text-justify mx-12;
 }
 .about__download {
-  @apply w-48 mt-8 bg-blue-100-jp text-white rounded-full px-4 py-2
+  @apply w-48 mt-8 bg-blue-100-jp text-white rounded-full px-4 py-2;
 }
 .about__image {
   @apply mx-10 my-8;
 }
 .about__image img {
-  @apply object-cover w-96 h-96 rounded-lg shadow-xl
+  @apply object-cover w-96 h-96 rounded-lg shadow-xl;
 }
 @screen md {
   .about {
-    @apply flex-row-reverse m-40 mt-32
+    @apply flex-row-reverse m-40 mt-32;
   }
   .about__title {
-    @apply text-5xl
+    @apply text-5xl;
   }
   .about__body {
-    @apply items-start w-1/2
+    @apply items-start w-1/2;
   }
   .bg-square-2 {
     @apply absolute bg-blue-jp transform rotate-45;
@@ -123,10 +128,10 @@ export default {
     left: -200px;
   }
   .about__sections h3 {
-    @apply ml-0 mr-4
+    @apply ml-0 mr-4;
   }
   .about__description {
-    @apply ml-0
+    @apply ml-0;
   }
 }
 </style>

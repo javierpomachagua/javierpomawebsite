@@ -11,29 +11,31 @@
           </h1>
         </div>
         <div class="relative w-full my-5">
-          <!--          <slider-->
-          <!--            id="slider"-->
-          <!--            animation="fade"-->
-          <!--            :control-btn="false"-->
-          <!--            :indicators="false"-->
-          <!--            height="500"-->
-          <!--            class="h-72 md:h-[28rem]"-->
-          <!--          >-->
-          <!--            <template v-for="(image, index) in project.images">-->
-          <!--              <slider-item :key="index">-->
-          <!--                <div-->
-          <!--                  class="md:flex md:flex-row md:items-center md:justify-center h-full"-->
-          <!--                >-->
-          <!--                  <figure class="md:mx-10 h-full">-->
-          <!--                    <nuxt-img-->
-          <!--                      class="object-contain w-full h-full mx-auto shadow-lg"-->
-          <!--                      :src="image"-->
-          <!--                    />-->
-          <!--                  </figure>-->
-          <!--                </div>-->
-          <!--              </slider-item>-->
-          <!--            </template>-->
-          <!--          </slider>-->
+          <no-ssr>
+            <slider
+              id="slider"
+              animation="fade"
+              :control-btn="false"
+              :indicators="false"
+              height="500"
+              class="h-72 md:h-[28rem]"
+            >
+              <template v-for="(image, index) in project.images">
+                <slider-item :key="index">
+                  <div
+                    class="md:flex md:flex-row md:items-center md:justify-center h-full"
+                  >
+                    <figure class="md:mx-10 h-full">
+                      <nuxt-img
+                        class="object-contain w-full h-full mx-auto shadow-lg"
+                        :src="image"
+                      />
+                    </figure>
+                  </div>
+                </slider-item>
+              </template>
+            </slider>
+          </no-ssr>
         </div>
         <div class="prose prose-md lg:prose-lg mx-auto">
           <nuxt-content :document="project" />

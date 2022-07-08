@@ -13,4 +13,9 @@ testimonials:
       title: Jefe de Proyectos Senior en Dirección de Educación Pública de Chile
       text: Excelente trabajo
       image: felipe_pfydyy.jpg
+    - id: 3
+      author: Wagner Producciones
+      title: Productora Audiovisual
+      text: Excelente servicio
+      image: logo-wagner-producciones-footer_zl4dca.png
 ---

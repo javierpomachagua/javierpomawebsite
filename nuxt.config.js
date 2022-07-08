@@ -1,4 +1,5 @@
 import { createSEOMeta } from './utils/seo'
+import getRoutes from './utils/getRoutes'
 
 export default {
   /*
@@ -141,6 +142,9 @@ export default {
 
   sitemap: {
     hostname: process.env.HOST_NAME,
-    gzip: true
+    gzip: true,
+    routes() {
+      return getRoutes()
+    }
   }
 }

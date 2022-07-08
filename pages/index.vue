@@ -4,17 +4,13 @@
     <AboutMe />
     <!-- <Skills /> -->
     <Portfolio />
-    <Clients />
+    <!--    <Clients />-->
     <Blog />
     <ContactMe />
     <Footer />
   </div>
 </template>
 
-<script>
+<script></script>
 
-</script>
-
-<style>
-
-</style>
+<style></style>

@@ -4,9 +4,8 @@
     <AboutMe />
     <!-- <Skills /> -->
     <Portfolio />
-    <no-ssr>
-      <Clients />
-    </no-ssr>
+
+    <Clients />
     <Blog />
     <ContactMe />
     <Footer />

@@ -14,54 +14,61 @@
       {{ clients.description }}
     </p>
     <div class="relative w-full my-10">
-      <slider
-        id="slider"
-        animation="fade"
-        :control-btn="false"
-        :indicators="false"
-      >
-        <template v-for="(testimonial, index) in clients.testimonials">
-          <slider-item :key="testimonial.id">
-            <div class="md:flex md:flex-row md:items-center md:justify-center">
-              <figure class="md:mx-10">
-                <nuxt-img
-                  class="object-cover w-32 h-32 md:w-48 md:h-72 mx-auto my-0 rounded-full shadow-lg md:rounded-xl"
-                  :src="testimonial.image"
-                />
-              </figure>
+      <no-ssr>
+        <slider
+          id="slider"
+          animation="fade"
+          :control-btn="false"
+          :indicators="false"
+        >
+          <template v-for="(testimonial, index) in clients.testimonials">
+            <slider-item :key="testimonial.id">
               <div
-                class="flex flex-col items-center mx-6 mt-6 md:w-1/3 md:items-start"
+                class="md:flex md:flex-row md:items-center md:justify-center"
               >
-                <icon-quote class="hidden md:block md:mb-2" alt="icon quote" />
-                <p
-                  class="mb-4 text-sm text-center text-gray-jp md:text-left md:text-lg"
+                <figure class="md:mx-10">
+                  <nuxt-img
+                    class="object-cover w-32 h-32 md:w-48 md:h-72 mx-auto my-0 rounded-full shadow-lg md:rounded-xl"
+                    :src="testimonial.image"
+                  />
+                </figure>
+                <div
+                  class="flex flex-col items-center mx-6 mt-6 md:w-1/3 md:items-start"
                 >
-                  {{ testimonial.text }}
-                </p>
-                <h2 class="text-base font-bold sm:text-xl">
-                  {{ testimonial.author }}
-                </h2>
-                <h3
-                  class="mb-4 text-base text-center md:px-0 md:text-left sm:text-xl"
-                >
-                  {{ testimonial.title }}
-                </h3>
-                <div class="flex flex-row">
-                  <template v-for="n in clients.testimonials.length">
-                    <div
-                      :key="n"
-                      class="w-6 h-2 mr-2"
-                      :class="
-                        n === index + 1 ? 'bg-blue-500' : 'bg-gray-100-jp'
-                      "
-                    />
-                  </template>
+                  <icon-quote
+                    class="hidden md:block md:mb-2"
+                    alt="icon quote"
+                  />
+                  <p
+                    class="mb-4 text-sm text-center text-gray-jp md:text-left md:text-lg"
+                  >
+                    {{ testimonial.text }}
+                  </p>
+                  <h2 class="text-base font-bold sm:text-xl">
+                    {{ testimonial.author }}
+                  </h2>
+                  <h3
+                    class="mb-4 text-base text-center md:px-0 md:text-left sm:text-xl"
+                  >
+                    {{ testimonial.title }}
+                  </h3>
+                  <div class="flex flex-row">
+                    <template v-for="n in clients.testimonials.length">
+                      <div
+                        :key="n"
+                        class="w-6 h-2 mr-2"
+                        :class="
+                          n === index + 1 ? 'bg-blue-500' : 'bg-gray-100-jp'
+                        "
+                      />
+                    </template>
+                  </div>
                 </div>
               </div>
-            </div>
-          </slider-item>
-        </template>
-      </slider>
+            </slider-item>
+          </template>
+        </slider>
+      </no-ssr>
     </div>
   </section>
 </template>

@@ -1,5 +1,13 @@
 export const createSEOMeta = ({ title, description, image, url }) => [
   {
+    name: 'title',
+    content: title
+  },
+  {
+    name: 'description',
+    content: description
+  },
+  {
     hid: 'og:title',
     property: 'og:title',
     content: title

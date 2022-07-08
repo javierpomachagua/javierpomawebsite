@@ -22,7 +22,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ...createSEOMeta({
-        title: 'Javier Pomachagua Pérez',
+        title: 'Javier Pomachagua Pérez - Sitio Web',
         description: 'Desarrolador Fullstack Laravel',
         image:
           'https://res.cloudinary.com/dy09hqrno/image/upload/v1657291645/logo-javierpoma_rhcjob.png',

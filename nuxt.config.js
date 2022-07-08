@@ -23,9 +23,9 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ...createSEOMeta({
         title: 'Javier Pomachagua Pérez',
-        description: 'Desarrolador Fullstack Laravel & Nuxt',
+        description: 'Desarrolador Fullstack Laravel',
         image:
-          'https://res.cloudinary.com/dy09hqrno/image/upload/v1623886883/Foto_Perfil_tscpeg.jpg',
+          'https://res.cloudinary.com/dy09hqrno/image/upload/v1657291645/logo-javierpoma_rhcjob.png',
         url: process.env.HOST_NAME
       })
     ],

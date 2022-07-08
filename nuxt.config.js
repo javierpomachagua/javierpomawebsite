@@ -83,7 +83,8 @@ export default {
     // Doc: https://cloudinary.nuxtjs.org/
     '@nuxtjs/cloudinary',
     // Doc: https://pwa.nuxtjs.org/
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap'
   ],
   /*
    ** Axios module configuration
@@ -136,5 +137,10 @@ export default {
    */
   generate: {
     fallback: true
+  },
+
+  sitemap: {
+    hostname: process.env.HOST_NAME,
+    gzip: true
   }
 }

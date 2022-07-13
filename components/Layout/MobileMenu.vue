@@ -1,6 +1,8 @@
 <template>
   <transition name="fade">
-    <div class="absolute z-30 px-2 mr-4 text-white bg-gray-500 mt-14 right-1 rounded-xl">
+    <div
+      class="absolute z-30 px-2 mr-4 text-white bg-gray-500 mt-14 right-1 rounded-xl"
+    >
       <div
         v-if="!isBlog"
         class="p-2 mb-2 rounded-lg cursor-pointer text-md"
@@ -8,17 +10,27 @@
       >
         Sobre mí
       </div>
-      <div
-        v-if="!isBlog"
+      <nuxt-link
+        v-if="isBlog"
+        to="/"
+        tag="div"
         class="p-2 mb-2 rounded-lg cursor-pointer text-md"
-        @click="scrollToElement('portfolio')"
       >
-        Portafolio
-      </div>
-      <nuxt-link v-if="isBlog" to="/" tag="div" class="p-2 mb-2 rounded-lg cursor-pointer text-md">
         Perfil
       </nuxt-link>
-      <nuxt-link :to="{ name: 'blog' }" tag="div" class="p-2 mb-2 rounded-lg cursor-pointer text-md">
+      <nuxt-link
+        v-if="isBlog"
+        :to="{ name: 'projects' }"
+        tag="div"
+        class="p-2 mb-2 rounded-lg cursor-pointer text-md"
+      >
+        Portafolio
+      </nuxt-link>
+      <nuxt-link
+        :to="{ name: 'blog' }"
+        tag="div"
+        class="p-2 mb-2 rounded-lg cursor-pointer text-md"
+      >
         Blog
       </nuxt-link>
       <div
@@ -41,13 +53,11 @@ export default {
     }
   },
   methods: {
-    scrollToElement (name) {
+    scrollToElement(name) {
       this.$scrollToElement(name)
     }
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

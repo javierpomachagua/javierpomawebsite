@@ -1,5 +1,5 @@
 ---
-title: Four Fast Distribuidores
+title: Aplicación de Venta y Pedidos
 description: Optimizar el registro de las ventas y de los productos en stock
 tags:
   - Laravel

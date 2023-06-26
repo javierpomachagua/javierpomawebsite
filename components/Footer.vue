@@ -131,8 +131,8 @@
         </svg>
       </a>
     </div>
-    <p class="text-xs text-center">
-      Diseñado con  <icon-heart class="inline-block w-4 h-4 mx-2" />  por Javier Pomachagua Pérez
+    <p class="text-sm text-center">
+      Diseñado con por Javier Pomachagua Pérez
     </p>
   </footer>
 </template>
@@ -164,7 +164,7 @@ export default {
   @apply flex flex-wrap justify-center mb-4
 }
 .footer__link {
-  @apply mr-4 text-sm font-semibold
+  @apply mr-4 text-base font-semibold
 }
 .footer__socials-networks {
   @apply flex flex-wrap justify-center mb-6

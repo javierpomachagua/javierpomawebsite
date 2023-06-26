@@ -9,7 +9,7 @@
       {{ clients.title }}
     </h1>
     <p
-      class="mx-12 mt-4 text-sm text-center text-gray-jp sm:w-72 sm:text-center"
+      class="mx-12 mt-4 text-xl text-center text-gray-jp sm:w-72 sm:text-center"
     >
       {{ clients.description }}
     </p>
@@ -114,7 +114,7 @@ export default {
 }
 
 .clients__intro {
-  @apply text-lg text-black-jp;
+  @apply text-xl text-black-jp;
 }
 
 .clients__title {

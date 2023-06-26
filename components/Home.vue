@@ -11,14 +11,7 @@
     >
       <div class="flex flex-col items-center">
         <figure>
-          <nuxt-img
-            provider="cloudinary"
-            class="w-40 rounded-full shadow-2xl md:w-96"
-            width="350"
-            height="350"
-            src="profile_photo"
-            alt="Imagen de Perfil"
-          />
+          <Logo class="shadow-2xl h-[20rem] w-[20rem]"/>
         </figure>
         <div class="flex justify-center mt-6 space-x-4 md:justify-start">
           <a
@@ -45,13 +38,13 @@
         </div>
       </div>
       <div class="mt-0 text-center md:text-left md:mt-0">
-        <p class="mt-8 text-lg text-black-jp">
+        <p class="mt-8 text-xl text-black-jp">
           {{ home.greeting }}
         </p>
         <h1 class="text-3xl font-bold text-black-jp md:text-jp-xl md:mt-3">
           {{ home.name }}
         </h1>
-        <p class="mt-8 text-lg text-gray-jp md:mt-8">
+        <p class="mt-8 text-2xl text-gray-jp md:mt-8">
           Desarrollador Web Fullstack
         </p>
         <div
@@ -89,9 +82,11 @@ import IconTailwind from '@/assets/icons/tailwind.svg?inline'
 import IconTwitter from '@/assets/icons/twitter.svg?inline'
 import IconGithub from '@/assets/icons/github.svg?inline'
 import IconLinkedin from '@/assets/icons/linkedin.svg?inline'
+import Logo from '~/components/Logo.vue'
 
 export default {
   components: {
+    Logo,
     IconNuxt,
     IconTailwind,
     IconTwitter,

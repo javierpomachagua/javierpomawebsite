@@ -5,8 +5,8 @@
     <div
       class="relative px-10 md:w-min md:border-none md:m-24 md:py-10 md:px-12 md:bg-white md:shadow-lg md:rounded-2xl"
     >
-      <h1 class="mx-10 text-xl font-bold text-center mb-14">
-        Siéntese libre de contactarse conmigo y conversar
+      <h1 class="mx-10 text-2xl font-bold text-center mb-14">
+        ¿Tiene algún proyecto en mente que pueda ayudarlo?
       </h1>
       <form
         class="flex flex-col items-center"
@@ -16,21 +16,21 @@
       >
         <input type="hidden" name="form-name" value="Contact">
         <input
-          class="w-64 mb-10 text-sm border-b-2 outline-none border-gray-200-jp md:w-96"
+          class="w-64 mb-10 text-md border-b-2 outline-none border-gray-200-jp md:w-96"
           type="text"
           placeholder="Su nombre"
           name="name"
           required
         >
         <input
-          class="w-64 mb-10 text-sm border-b-2 outline-none border-gray-200-jp md:w-96"
+          class="w-64 mb-10 text-md border-b-2 outline-none border-gray-200-jp md:w-96"
           type="email"
           placeholder="Su correo"
           name="email"
           required
         >
         <textarea
-          class="w-64 text-sm border-b-2 outline-none border-gray-200-jp md:w-96"
+          class="w-64 text-md border-b-2 outline-none border-gray-200-jp md:w-96"
           rows="4"
           placeholder="Escriba su mensaje"
           name="message"

@@ -1,5 +1,5 @@
 ---
-title: Registro para Capacitación de Cerveza Artesanal - Beer by Academy
+title: Panel de Control de Eventos
 description: Registro mediante código QR para las capacitaciones.
 tags:
 - Laravel

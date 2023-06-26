@@ -1,5 +1,5 @@
 ---
-title: Taller Sitem
+title: Sistema de Gestión de Diagnóstico Automotriz
 description: Gestionar las reservas y rastreo de los vehículos en mantenimiento.
 tags:
   - Laravel

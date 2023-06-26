@@ -3,7 +3,7 @@ title: Panel de Control de Datos de Capacitaciones
 description: Analizar la información recogida por dispositivos de realidad virtual
 tags:
 - Laravel
-main_image: minh-pham-HI6gy-p-WBI-unsplash_twxcsg.jpg
+main_image: Captura_de_Pantalla_2022-04-07_a_la_s_11.49.35_tniuxz.png
 images:
 - Captura_de_Pantalla_2022-04-07_a_la_s_11.49.35_tniuxz.png
 - Captura_de_Pantalla_2022-04-07_a_la_s_11.49.50_bkpfky.png

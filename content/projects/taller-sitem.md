@@ -3,7 +3,7 @@ title: Sistema de Gestión de Diagnóstico Automotriz
 description: Gestionar las reservas y rastreo de los vehículos en mantenimiento.
 tags:
   - Laravel
-main_image: taller_tn1ukw
+main_image: Captura_de_Pantalla_2022-03-31_a_la_s_16.59.51_dzuwzm.png
 images:
   - Captura_de_Pantalla_2022-03-31_a_la_s_16.59.12_tpgzov.png
   - Captura_de_Pantalla_2022-03-31_a_la_s_16.59.51_dzuwzm.png

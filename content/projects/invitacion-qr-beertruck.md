@@ -3,7 +3,7 @@ title: Panel de Control de Eventos
 description: Registro mediante código QR para las capacitaciones.
 tags:
 - Laravel
-main_image: adam-wilson-ANK5zq-g_-g-unsplash_1_voim5n.jpg
+main_image: Captura_de_Pantalla_2022-04-07_a_la_s_12.35.53_urumqq.png
 images:
 - Captura_de_Pantalla_2022-04-07_a_la_s_12.35.53_urumqq.png
 - Captura_de_Pantalla_2022-04-07_a_la_s_12.36.12_c2udwd.png

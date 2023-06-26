@@ -4,7 +4,7 @@ description: Optimizar el registro de las ventas y de los productos en stock
 tags:
   - Laravel
   - Nuxt
-main_image: ff_kl6ib8 
+main_image: Captura_de_Pantalla_2022-04-07_a_la_s_10.39.02_zfvxcm.png 
 images:
   - Captura_de_Pantalla_2022-04-07_a_la_s_10.38.48_b7o8ms.png
   - Captura_de_Pantalla_2022-04-07_a_la_s_10.39.02_zfvxcm.png

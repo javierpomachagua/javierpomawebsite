@@ -15,7 +15,7 @@
         </figure>
         <div class="flex justify-center mt-6 space-x-4 md:justify-start">
           <a
-            href="https://www.linkedin.com/in/javier-pomachagua-p%C3%A9rez-aa7407157/"
+            href="https://www.linkedin.com/in/javier-pomachagua-aa7407157/"
             target="_blank"
             class="transition-all duration-500 ease-in-out transform hover:-translate-y-3"
           >
